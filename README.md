@@ -104,7 +104,6 @@ po文件的消息提取自docbook格式xml文件，带有xml标签和实体引�
 		yum install docbook-style-xsl kdesdk-poxml
 		yum install postgresql96-devel 
 
-
 4. 编译
 
 		tar xzf postgis-2.3.3.tar.gz
