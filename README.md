@@ -82,7 +82,6 @@ po文件的消息提取自docbook格式xml文件，带有xml标签和实体引�
 
 - [postgis-2.3.3中文手册(翻译中)](http://postgres.cn/docs/9.6/postgis-2.3)
 
-
 ## 6. 本地文档编译
 
 文档编译参考以下CentOS7上编译postgis-2.3.3的步骤
