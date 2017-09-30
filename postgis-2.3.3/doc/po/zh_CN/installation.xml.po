@@ -7,38 +7,40 @@ msgstr ""
 "Project-Id-Version: PostGIS\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2016-07-04 13:02+0000\n"
-"PO-Revision-Date: 2016-02-15 12:14+0000\n"
-"Last-Translator: Sandro Santilli <strk@kbt.io>\n"
-"Language-Team: Simplified Chinese (https://github.com/postgres-cn/postgisdoc)\n"
+"PO-Revision-Date: 2017-09-30 15:37+0800\n"
+"Last-Translator: 韩悦悦 <hanyueyue@highgo.com>\n"
+"Language-Team: Simplified Chinese (https://github.com/postgres-cn/"
+"postgisdoc)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #. Tag: title
 #: installation.xml:3
 #, no-c-format
 msgid "PostGIS Installation"
-msgstr "PostGISインストール"
+msgstr "PostGIS安装"
 
 #. Tag: para
 #: installation.xml:5
 #, no-c-format
 msgid "This chapter details the steps required to install PostGIS."
-msgstr "本章では、PostGISのインストールに必要な手順について説明します。"
+msgstr "这一章详细介绍安装 PostGIS 所需的步骤。"
 
 #. Tag: title
 #: installation.xml:10
 #, no-c-format
 msgid "Short Version"
-msgstr "簡略版"
+msgstr "简略版"
 
 #. Tag: para
 #: installation.xml:11
 #, no-c-format
 msgid "To compile assuming you have all the dependencies in your search path:"
-msgstr "全ての依存がパスに入っているとする場合、次のようにコンパイルします。"
+msgstr "假设当前使用路径中您拥有所有的依赖关系，编译命令如下："
 
 #. Tag: programlisting
 #: installation.xml:12
@@ -62,9 +64,7 @@ msgstr ""
 msgid ""
 "Once postgis is installed, it needs to be enabled in each individual "
 "database you want to use it in."
-msgstr ""
-"PostGISをインストールした後は、利用したいデータベース個々内で利用可能にする必"
-"要があります。"
+msgstr "PostGIS安装完成后，你需要在每个需要使用该功能的数据库中安装该插件。"
 
 #. Tag: para
 #: installation.xml:14
@@ -75,14 +75,13 @@ msgid ""
 "Using the extension enable process is preferred and more user-friendly. To "
 "spatially enable your database:"
 msgstr ""
-"ラスタ機能は現在はオプションですが、デフォルトではインストールされます。"
-"PostgreSQL 9.1以上のエクステンションモデルを使ってインストールするには必須で"
-"す。エクステンションを有効にする処理の方がよりよく、かつユーザフレンドリで"
-"す。空間データベースを有効にするには、次のようにします。"
+"栅格支持目前是可选的但默认安装。要启用，需要使用 PostgreSQL 9.1以上版本，然后"
+"扩展安装模块栅格。启用扩展方法是首选的，也更方便用户。为了创建有空间处理功能"
+"的数据库，执行下面的命令："
 
 #. Tag: programlisting
 #: installation.xml:15
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "psql -d yourdatabase -c \"CREATE EXTENSION postgis;\"\n"
 "psql -d yourdatabase -c \"CREATE EXTENSION postgis_topology;\"\n"
@@ -99,15 +98,15 @@ msgid ""
 msgstr ""
 "psql -d yourdatabase -c \"CREATE EXTENSION postgis;\"\n"
 "psql -d yourdatabase -c \"CREATE EXTENSION postgis_topology;\"\n"
-"-- SFCGAL対応でビルドした場合は次を実行 --\n"
+"-- 如果使用sfcgal支持构建 --\n"
 "psql -d yourdatabase -c \"CREATE EXTENSION postgis_sfcgal;\"\n"
 "\n"
-"-- Tigerジオコーダをインストールしたい場合は次の二つを実行 --\n"
+"-- 如果您想安装tiger地理编码器 --\n"
 "psql -d yourdatabase -c \"CREATE EXTENSION fuzzystrmatch\"\n"
 "psql -d yourdatabase -c \"CREATE EXTENSION postgis_tiger_geocoder;\"\n"
 "\n"
-"-- PCRE付きでインストールした場合は\n"
-"-- 住所標準化エクステンションも持つべきです\n"
+"-- 如果您安装了pcre\n"
+"-- 您也应该安装地址标准化扩展\n"
 "psql -d yourdatabase -c \"CREATE EXTENSION address_standardizer;\""
 
 #. Tag: para
@@ -119,10 +118,9 @@ msgid ""
 "extensions, or switching from a non-extension install to an extension "
 "install."
 msgstr ""
-"インストールされて有効になっているEXTENSIONのクエリやEXTENSIONのアップグレー"
-"ド、EXTENSIONを使わずにインストールした場合のEXTENSIONへの切り替えに関する詳"
-"細情報については、<xref linkend=\"make_install_postgis_extensions\"/>を参照し"
-"て下さい。"
+"关于如何进行PostGIS插件的安装及启用，升级或者不使用非插件安装的方式而使用插件"
+"安装的方式的详细介绍，请参阅<xref linkend=\"make_install_postgis_extensions"
+"\"/>。"
 
 #. Tag: para
 #: installation.xml:20
@@ -132,8 +130,8 @@ msgid ""
 "support, or just are old-fashioned, here are longer more painful "
 "instructions for you:"
 msgstr ""
-"なんらかの理由で、ラスタ機能なしでコンパイルするか古いやり方でインストールす"
-"る場合には、より長く、より苦痛を伴いますが、やり方はあります。"
+"对于那些因为某些原因或者仅仅是因为过时想法而不愿意使用栅格功能支持的运行，这"
+"里有更长更痛苦的安装指南："
 
 #. Tag: para
 #: installation.xml:21
@@ -142,8 +140,8 @@ msgid ""
 "All the .sql files once installed will be installed in share/contrib/postgis-"
 "&last_minor_version; folder of your PostgreSQL install"
 msgstr ""
-"インストールされた.sqlファイルは全てPostgreSQLがインストールされているフォル"
-"ダ内のshare/contrib/postgis-&last_minor_version;の中にあります。"
+"所有的 .sql 文件一旦执行，将会同时安装（拷贝）到你的PostgreSQL安装目录下的"
+"share/contrib/postgis-&last_minor_version;文件夹下面"
 
 #. Tag: programlisting
 #: installation.xml:24
@@ -171,7 +169,7 @@ msgstr ""
 "psql -d yourdatabase -f raster_comments.sql\n"
 "psql -d yourdatabase -f topology.sql\n"
 "psql -d yourdatabase -f topology_comments.sql\n"
-"--SFCGAL対応でビルドした場合 --\n"
+"-- 如果要启用sfcgal支持 --\n"
 "psql -d yourdatabase -f sfcgal.sql\n"
 "psql -d yourdatabase -f sfcgal_comments.sql"
 
@@ -181,7 +179,7 @@ msgstr ""
 msgid ""
 "The rest of this chapter goes into detail each of the above installation "
 "steps."
-msgstr "本章の残りでは、上記のインストール手順の個々の詳細を見ていきます。"
+msgstr "本章的剩余部分将详细介绍上述的安装步骤。"
 
 #. Tag: para
 #: installation.xml:31
@@ -194,12 +192,16 @@ msgid ""
 "For PostGIS 2.2, you can use the more cross-platform approach of setting the "
 "corresponding <xref linkend=\"PostGIS_GUC\"/>."
 msgstr ""
+"到了PostGIS 2.1.3，默认情况下禁用数据库之外的栅格和所有栅格驱动程序。要重新启"
+"用，需要在服务器中设置环境变量<varname>POSTGIS_GDAL_ENABLED_DRIVERS</varname>"
+"和<varname>POSTGIS_ENABLE_OUTDB_RASTERS</varname>。对于 PostGIS 2.2，可以使用"
+"跨平台的方法设置对应的<xref linkend=\"PostGIS_GUC\"/>。"
 
 #. Tag: para
 #: installation.xml:34
 #, no-c-format
 msgid "If you want to enable offline raster:"
-msgstr "データベース外ラスタを有効にするには次のようにします。"
+msgstr "如果想要启用离线栅格："
 
 #. Tag: programlisting
 #: installation.xml:35
@@ -211,9 +213,7 @@ msgstr "POSTGIS_ENABLE_OUTDB_RASTERS=1"
 #: installation.xml:36
 #, no-c-format
 msgid "Any other setting or no setting at all will disable out of db rasters."
-msgstr ""
-"他の値を入れたり、値を入れない場合には、データベース外ラスタは無効になりま"
-"す。"
+msgstr "任何其他设置或者不设置都会禁用数据库之外的栅格。"
 
 #. Tag: para
 #: installation.xml:37
@@ -221,8 +221,7 @@ msgstr ""
 msgid ""
 "In order to enable all GDAL drivers available in your GDAL install, set this "
 "environment variable as follows"
-msgstr ""
-"インストールしたGDALのドライバを有効にするには、次の環境変数を設定します。"
+msgstr "为了启用GDAL安装中的所有GDAL驱动器，设置如下环境变量"
 
 #. Tag: programlisting
 #: installation.xml:38
@@ -236,8 +235,7 @@ msgstr "POSTGIS_GDAL_ENABLED_DRIVERS=ENABLE_ALL"
 msgid ""
 "If you want to only enable specific drivers, set your environment variable "
 "as follows:"
-msgstr ""
-"一部のドライバのみ有効にしたい場合には、環境変数を次のように設定します。"
+msgstr "如果您想仅启用指定的驱动器，如下设置您的环境变量："
 
 #. Tag: programlisting
 #: installation.xml:40
@@ -249,7 +247,7 @@ msgstr "POSTGIS_GDAL_ENABLED_DRIVERS=\"GTiff PNG JPEG GIF XYZ\""
 #: installation.xml:42
 #, no-c-format
 msgid "If you are on windows, do not quote the driver list"
-msgstr "Windows上の場合は、ドライバリストに引用符をつけないで下さい。"
+msgstr "Windows上不要引用驱动器列表"
 
 #. Tag: para
 #: installation.xml:44
@@ -261,11 +259,10 @@ msgid ""
 "<replaceable>main</replaceable>/environment</filename> where 9.3 refers to "
 "version of PostgreSQL and main refers to the cluster."
 msgstr ""
-"環境変数の設定はOSによって変わります。UbuntuやDebian上でapt-postgresqlからイ"
-"ンストールしたPostgreSQLの場合には、<filename>/etc/postgresql/"
-"<replaceable>9.3</replaceable>/<replaceable>main</replaceable>/environment</"
-"filename>を編集するのが好まれます。なお、9.3はPostgreSQLの版を指し、mainはク"
-"ラスタを示します。"
+"环境变量的设置根据OS不同而变化。安装在Ubuntu或Debian上的PostgreSQL通过apt-"
+"postgresql，首选方式是编辑<filename>/etc/postgresql/<replaceable>9.3</"
+"replaceable>/<replaceable>main</replaceable>/environment</filename>，这里的"
+"9.3指的是PostgreSQL的版本，main指的是集群。"
 
 #. Tag: para
 #: installation.xml:47
@@ -278,12 +275,10 @@ msgid ""
 "clicking <emphasis>Advanced System Settings -&gt;Advanced->Environment "
 "Variables</emphasis> and adding new system variables."
 msgstr ""
-"Windowsでサービスとして実行している場合には、システム変数で設定します。"
-"Windows 7では、コンピュータを右クリックしてプロパティをクリックするか、エクス"
-"プローラの検索バーに<varname>コントロール パネル\\すべてのコントロール パネル"
-"項目\\システム</varname>を指定します。<emphasis>システムの詳細設定 -&gt; 詳細"
-"設定 -&gt; 環境変数</emphasis>を順にクリックして、新しいシステム環境変数を追"
-"加します。"
+"Windows系统如果作为服务器运行，可以通过系统变量设置，对于Windows 7来说，右击"
+"计算机-&gt;属性高级系统设置或资源管理器导航中<varname>控制面板\\所有控制面板"
+"选项\\系统</varname>。然后点击<emphasis>高级系统设置 -&gt;高级 -&gt;环境变量"
+"</emphasis>，然后添加新的系统变量。"
 
 #. Tag: para
 #: installation.xml:49
@@ -291,27 +286,25 @@ msgstr ""
 msgid ""
 "After you set the environment variables, you'll need to restart your "
 "PostgreSQL service for the changes to take effect."
-msgstr ""
-"環境変数を設定した後は、設定を反映させるために、PostgreSQLサービスの再起動が"
-"必要です。"
+msgstr "设置环境变量之后，需要重启PostgreSQL服务以使更改生效。"
 
 #. Tag: title
 #: installation.xml:53
 #, no-c-format
 msgid "Install Requirements"
-msgstr "インストール要件"
+msgstr "安装要求"
 
 #. Tag: para
 #: installation.xml:55
 #, no-c-format
 msgid "PostGIS has the following requirements for building and usage:"
-msgstr "PostGISのビルドと利用のために、次のものが必要です。"
+msgstr "PostGIS 在安装和使用前有如下要求:"
 
 #. Tag: emphasis
 #: installation.xml:60
 #, no-c-format
 msgid "Required"
-msgstr "必須"
+msgstr "要求"
 
 #. Tag: para
 #: installation.xml:65
@@ -322,9 +315,9 @@ msgid ""
 "from <ulink url=\"http://www.postgresql.org\"> http://www.postgresql.org </"
 "ulink> ."
 msgstr ""
-"PostgreSQL &min_postgres_version;以上。PostgreSQLの完全なインストール (サーバ"
-"ヘッダを含む)が必要です。PostgreSQLは<ulink url=\"http://www.postgresql.org/"
-"\"> http://www.postgresql.org/</ulink>にあります。"
+"PostgreSQL &min_postgres_version; 或更高版本。必须完整的安装PostgreSQL包括服"
+"务器端，PostgreSQL可以到如下网站获取<ulink url=\"http://www.postgresql.org"
+"\"> http://www.postgresql.org </ulink>。"
 
 #. Tag: para
 #: installation.xml:74
@@ -335,10 +328,9 @@ msgid ""
 "UsersWikiPostgreSQLPostGIS\">http://trac.osgeo.org/postgis/wiki/"
 "UsersWikiPostgreSQLPostGIS</ulink>"
 msgstr ""
-"完全なPosgreSQL/PostGIS対応表とPostGIS/GEOS対応表については<ulink url="
-"\"http://trac.osgeo.org/postgis/wiki/UsersWikiPostgreSQLPostGIS\">http://"
-"trac.osgeo.org/postgis/wiki/UsersWikiPostgreSQLPostGIS</ulink>をご覧くださ"
-"い。"
+"PostgreSQL与PostGIS 版本支持(兼容)关系和PostGIS与GEOS 版本支持(兼容)关系请参"
+"考<ulink url=\"http://trac.osgeo.org/postgis/wiki/UsersWikiPostgreSQLPostGIS"
+"\">http://trac.osgeo.org/postgis/wiki/UsersWikiPostgreSQLPostGIS</ulink>"
 
 #. Tag: para
 #: installation.xml:80
@@ -348,9 +340,9 @@ msgid ""
 "be used to compile PostGIS, but we find far fewer problems when compiling "
 "with <filename>gcc</filename>."
 msgstr ""
-"GNU Cコンパイラ (<filename>gcc</filename>)。ANSI Cコンパイラの中には、PostGIS"
-"をコンパイルできるものもありますが、<filename>gcc</filename>でコンパイルする"
-"のが最も問題が少ないと見ています。"
+"GNU C 编译器 (<filename>gcc</filename>编译器)。一些其他的ANSI C 编译器也能用"
+"来编译PostGIS，但是我们发现用<filename>gcc</filename>编译器出现的问题要少得"
+"多。"
 
 #. Tag: para
 #: installation.xml:88
@@ -362,10 +354,10 @@ msgid ""
 "<filename>make</filename> may not process the PostGIS <filename>Makefile</"
 "filename> properly."
 msgstr ""
-"GNU Make (<filename>gmake</filename>または<filename>make</filename>)。多くの"
-"システムで、GNU makeがデフォルトのmakeになっています。<filename>make -v</"
-"filename>を実行して版を確認して下さい。他版の<filename>make</filename>では、"
-"PostGISの<filename>Makefile</filename>を完全に処理しきれないかもしれません。"
+"GNU Make (<filename>gmake</filename>或<filename>make</filename>)。对于许多系"
+"统，GNU 版本的<filename>make</filename>是默认的。通过如下命令检查版本："
+"<filename>make -v</filename>，其他版本的<filename>make</filename>可能会不正确"
+"处理PostGIS <filename>Makefile</filename>文件。"
 
 #. Tag: para
 #: installation.xml:98
@@ -376,9 +368,9 @@ msgid ""
 "available for download from <ulink url=\"http://trac.osgeo.org/proj/\"> "
 "http://trac.osgeo.org/proj/ </ulink> ."
 msgstr ""
-"投影変換ライブラリ Proj4 の 4.6.0版以上。Proj4ライブラリは、PostGISの座標系投"
-"影変換機能に使われます。Proj4は、<ulink url=\"http://trac.osgeo.org/proj/"
-"\">http://trac.osgeo.org/proj/</ulink>からダウンロードできます。"
+"Proj4 重投影的库4.6.0或更高。Proj4 库用于为PostGIS提供坐标投影系统转换的库支"
+"持。Proj4可从如下网站下载 <ulink url=\"http://trac.osgeo.org/proj/\"> http://"
+"trac.osgeo.org/proj/ </ulink>。"
 
 #. Tag: para
 #: installation.xml:110
@@ -392,12 +384,11 @@ msgid ""
 "osgeo.org/geos/ </ulink> and 3.4+ is backward-compatible with older versions "
 "so fairly safe to upgrade."
 msgstr ""
-"ジオメトリライブラリGEOSの3.3版以上。新しい関数や機能の全てを得るために、"
-"GEOS 3.5以上を推奨します。GEOS 3.5以外では、<xref linkend=\"ST_ClipByBox2D\"/"
-">や<xref linkend=\"ST_Subdivide\"/>のような機能強化が使えません。GEOSは"
-"<ulink url=\"http://trac.osgeo.org/geos/\">http://trac.osgeo.org/geos/</"
-"ulink>からダウンロードできます。3.4以上は古い版との後方互換があり、アップグ"
-"レードがかなり安全です。"
+"GEOS几何对象库，版本3.3或更高，但推荐3.5 及以上版本，这样可以充分利用所有的新"
+"功能及特性。不使用GEOS 3.5及以上版本，你会错过一些重大的改进，如<xref "
+"linkend=\"ST_ClipByBox2D\"/>和<xref linkend=\"ST_Subdivide\"/>。GEOS在如下网"
+"站可供下载<ulink url=\"http://trac.osgeo.org/geos/\"> http://trac.osgeo.org/"
+"geos/ </ulink>并且3.4及以上版本是对老版本相当安全的兼容升级。"
 
 #. Tag: para
 #: installation.xml:119
@@ -408,10 +399,9 @@ msgid ""
 "download from <ulink url=\"http://xmlsoft.org/downloads.html\">http://"
 "xmlsoft.org/downloads.html</ulink>."
 msgstr ""
-"LibXML2の2.5.x以上。LibXML2は現在取り込み関数 (ST_GeomFromGMLと"
-"ST_GeomFromKML)で使っています。LibXML2は<ulink url=\"http://xmlsoft.org/"
-"downloads.html\">http://xmlsoft.org/downloads.html</ulink>からダウンロード可"
-"能です。"
+"LibXML2, 版本 2.5.x 或更高。 LibXML2在当前某些输入性函数例如 (ST_GeomFromGML "
+"和 ST_GeomFromKML)中使用。LibXML2 在如下网站可以提供下载<ulink url=\"http://"
+"xmlsoft.org/downloads.html\">http://xmlsoft.org/downloads.html</ulink>。"
 
 #. Tag: para
 #: installation.xml:126
@@ -422,10 +412,9 @@ msgid ""
 "<ulink url=\"https://github.com/json-c/json-c/releases\">https://github.com/"
 "json-c/json-c/releases/</ulink>."
 msgstr ""
-"JSON-C 0.9以上。JSON-Cは現在、ST_GeomFromGeoJsonによるGeoJSONの取り込みに使わ"
-"れます。JSON-Cは<ulink url=\"https://github.com/json-c/json-c/releases/"
-"\">https://github.com/json-c/json-c/releases/</ulink>からダウンロード可能で"
-"す。"
+"JSON-C, 版本 0.9 或更高。JSON-C 当前在通过函数ST_GeomFromGeoJson 导入GeoJSON"
+"数据时使用。可以在如下网站获取<ulink url=\"https://github.com/json-c/json-c/"
+"releases\">https://github.com/json-c/json-c/releases/</ulink>。"
 
 #. Tag: para
 #: installation.xml:134
@@ -438,18 +427,17 @@ msgid ""
 "running 9.1+. <ulink url=\"http://trac.osgeo.org/gdal/wiki/DownloadSource"
 "\">http://trac.osgeo.org/gdal/wiki/DownloadSource</ulink>."
 msgstr ""
-"GDAL 1.8以上 (古い版では一部機能が働かなかったり挙動が異なるので1.9以上を強く"
-"推奨します)。ラスタ機能に必要で、<code>CREATE EXTENSION postgis</code>でのイ"
-"ンストールに必要となります。このため、PostgreSQL 9.1以上での使用では非常に推"
-"奨されます<ulink url=\"http://trac.osgeo.org/gdal/wiki/DownloadSource/"
-"\">http://trac.osgeo.org/gdal/wiki/DownloadSource/</ulink>からダウンロード可"
-"能です。"
+"GDAL, 版本 1.8 或更高 (1.9 或更高强烈推荐，因为在更低版本一些功能不能很好的运"
+"行或者运行结果有不同）。栅格功能支持必须需要这个库，对那些运行9.1版本及以上的"
+"PostgreSQL数据库，同时想使用<code>CREATE EXTENSION postgis</code> 这种方式安"
+"装的高度推荐该库。下载地址：<ulink url=\"http://trac.osgeo.org/gdal/wiki/"
+"DownloadSource\">http://trac.osgeo.org/gdal/wiki/DownloadSource</ulink>。"
 
 #. Tag: emphasis
 #: installation.xml:142
 #, no-c-format
 msgid "Optional"
-msgstr "オプション"
+msgstr "可选包"
 
 #. Tag: para
 #: installation.xml:147
@@ -461,11 +449,10 @@ msgid ""
 "will prevent you from installing them unless you install postgis as an "
 "extension. So it is highly recommended you compile with GDAL support."
 msgstr ""
-"GDAL (実質必須)。ラスタを求めておらず、かつ<code>CREATE EXTENSION postgis</"
-"code>によるインストールを気にしない場合に限って放置できます。他のEXTENSION"
-"で、PostGISをEXTENSIONとしてインストールしないと、インストールできないものが"
-"あるかも知れないことを心にとどめておいて下さい。このため、GDAL対応でのコンパ"
-"イルは、非常に望まれます。"
+"GDAL (伪可选(译者注：意思是如果要使用某些功能，这个还是必选的))：只有你不想要"
+"栅格功能，并且不在意使用<code>CREATE EXTENSION postgis</code>方式安装postgis"
+"时候，你可以省略这个库。记住其他插件可能需要postgis扩展，除非你安装postgis扩"
+"展，否则可能安装这些插件不会成功。因此强烈建议安装时候添加 GDAL 支持。"
 
 #. Tag: para
 #: installation.xml:151
@@ -474,8 +461,8 @@ msgid ""
 "Also make sure to enable the drivers you want to use as described in <xref "
 "linkend=\"install_short_version\"/>."
 msgstr ""
-"ドライバを有効にするには<xref linkend=\"install_short_version\"/>を参照してく"
-"ださい。"
+"还要确保启用了<xref linkend=\"install_short_version\"/>中描述的你想要使用的驱"
+"动。"
 
 #. Tag: para
 #: installation.xml:154
@@ -484,9 +471,8 @@ msgid ""
 "GTK (requires GTK+2.0, 2.8+) to compile the shp2pgsql-gui shape file loader. "
 "<ulink url=\"http://www.gtk.org/\"> http://www.gtk.org/ </ulink> ."
 msgstr ""
-"GTK (GTK+2.0, 2.8+が必要)。シェープファイルのローダであるshp2pgsql-guiのコン"
-"パイル用です。<ulink url=\"http://www.gtk.org/\">http://www.gtk.org/</ulink>"
-"にあります。"
+"GTK (需要 GTK+2.0, 2.8+及以上)编译 shp2pgsql-gui shape 文件加载工具。可在如下"
+"网站获取<ulink url=\"http://www.gtk.org/\"> http://www.gtk.org/ </ulink>。"
 
 #. Tag: para
 #: installation.xml:164
@@ -503,17 +489,15 @@ msgid ""
 "oslandia.github.io/SFCGAL/installation.html</ulink>) <ulink url=\"https://"
 "github.com/Oslandia/SFCGAL\">https://github.com/Oslandia/SFCGAL</ulink>."
 msgstr ""
-"SFCGAL 1.1版以上。追加的な2次元や3次元の高度な解析関数をPostGISで使うために使"
-"用するものです。<xref linkend=\"reference_sfcgal\"/>をご覧下さい。また、GEOS"
-"を使う2次元関数のうちいくつか (たとえばST_IntersectionやST_Area)は、GEOSでな"
-"くSFCGALを使用することができます。PostgreSQLコンフィギュレーション変数"
-"<code>postgis.backend</code>によって、SFCGALがインストールされている場合には"
-"エンドユーザがバックエンドを制御することができます (デフォルトではGEOS)。"
-"SFCGAL 1.2は少なくともCGAL 4.3とBoost 1.54 (<ulink url=\"http://oslandia."
-"github.io/SFCGAL/installation.html\">http://oslandia.github.io/SFCGAL/"
-"installation.html</ulink>をご覧下さい)が必要ですのでご注意下さい。<ulink url="
-"\"https://github.com/Oslandia/SFCGAL\">https://github.com/Oslandia/SFCGAL</"
-"ulink>にあります。"
+"SFCGAL, 版本 1.1 (或更高) 可以为PostGIS提供额外的2D和3D的高级分析功能支持，请"
+"参考<xref linkend=\"reference_sfcgal\"/>。也允许使用SFCGAL而不是GEOS提供的一"
+"些后端2D函数（例如ST_Intersection或ST_Area）。如果安装了SFCGAL，PostgreSQL配"
+"置变量<code>postgis.backend</code>允许用户(相对于后端或者说服务端)来控制他想"
+"使用哪个服务端库，默认使用GEOS库。注意:SFCGAL 1.2需要至少CGAL 4.3库以及Boost "
+"库1.54版本的支持(参考:  <ulink url=\"http://oslandia.github.io/SFCGAL/"
+"installation.html\">http://oslandia.github.io/SFCGAL/installation.html</"
+"ulink>)<ulink url=\"https://github.com/Oslandia/SFCGAL\">https://github.com/"
+"Oslandia/SFCGAL</ulink>。"
 
 #. Tag: para
 #: installation.xml:172
@@ -528,13 +512,12 @@ msgid ""
 "library, or you pass in a valid <varname>--with-pcre-dir=/path/to/pcre</"
 "varname> during configure."
 msgstr ""
-"<xref linkend=\"Address_Standardizer\"/>をビルドするには、PCRE <ulink url="
-"\"http://www.pcre.org\">http://www.pcre.org</ulink> (Unix系システムには通常は"
-"インストール済みです)も必要です。<filename>parseaddress-stcities.h</filename>"
-"内のエンコードしたデータを再構築したい場合には、Perl CPANの<code>Regex::"
-"Assemble</code>パッケージのみ必要です。<xref linkend=\"Address_Standardizer"
-"\"/>は、PCREライブラリを検出するか、コンフィギュレーションで適切に<varname>--"
-"with-pcre-dir=/path/to/pcre</varname>を指定すると、自動的にビルドされます。"
+"为了编译<xref linkend=\"Address_Standardizer\"/>，还需要PCRE <ulink url="
+"\"http://www.pcre.org\">http://www.pcre.org</ulink> （在nix系统上，通常已经安"
+"装了）。仅在需要重新构建<filename>parseaddress-stcities.h</filename>中的数据"
+"时需要<code>Regex::Assemble</code> perl CPAN包。如果检测到PCRE库，或者在配置"
+"期间传入一个有效的<varname>--with-pcre-dir=/path/to/pcre</varname>，将自动构"
+"建<xref linkend=\"Address_Standardizer\"/>。"
 
 #. Tag: para
 #: installation.xml:179
@@ -544,9 +527,8 @@ msgid ""
 "<ulink url=\"http://cunit.sourceforge.net/\">http://cunit.sourceforge.net/</"
 "ulink>"
 msgstr ""
-"CUnit (<filename>CUnit</filename>)。レグレッションテストに必要です。<ulink "
-"url=\"http://cunit.sourceforge.net/\">http://cunit.sourceforge.net/</ulink>に"
-"あります。"
+"CUnit (<filename>CUnit</filename>). 回归测试需要这个库。<ulink url=\"http://"
+"cunit.sourceforge.net/\">http://cunit.sourceforge.net/</ulink>"
 
 #. Tag: para
 #: installation.xml:185
@@ -556,8 +538,9 @@ msgid ""
 "documentation. Docbook is available from <ulink url=\"http://www.docbook.org/"
 "\"> http://www.docbook.org/ </ulink> ."
 msgstr ""
-"DocBook (<filename>xsltproc</filename>)。文書のビルドに必要です。<ulink url="
-"\"http://www.docbook.org/\">http://www.docbook.org/</ulink>にあります。"
+"DocBook (<filename>xsltproc</filename>) ：创建文档需要这个包。可以去如下网站"
+"获取<ulink url=\"http://www.docbook.org/\"> http://www.docbook.org/ </"
+"ulink>。"
 
 #. Tag: para
 #: installation.xml:196
@@ -567,9 +550,9 @@ msgid ""
 "documentation in PDF format. DBLatex is available from <ulink url=\"http://"
 "dblatex.sourceforge.net/\"> http://dblatex.sourceforge.net/ </ulink> ."
 msgstr ""
-"DBLatex (<filename>dblatex</filename>)。文書をPDFでビルドするのに必要です。"
-"<ulink url=\"http://dblatex.sourceforge.net/\">http://dblatex.sourcforge.net/"
-"</ulink>にあります。"
+"DBLatex (<filename>dblatex</filename>) 创建PDF格式的文档需要这个包。可以去如"
+"下网站获取<ulink url=\"http://dblatex.sourceforge.net/\"> http://dblatex."
+"sourceforge.net/ </ulink>。"
 
 #. Tag: para
 #: installation.xml:207
@@ -579,15 +562,15 @@ msgid ""
 "images used in the documentation. ImageMagick is available from <ulink url="
 "\"http://www.imagemagick.org/\"> http://www.imagemagick.org/ </ulink> ."
 msgstr ""
-"ImageMagick (<filename>convert</filename>)。文書で使う画像を生成するのに必要"
-"です。<ulink url=\"http://www.imagemagick.org/\">http://www.imagemagick.org/"
-"</ulink>にあります。"
+"ImageMagick (<filename>convert</filename>）：生成文档中的图片需要这个包。可以"
+"去如下网站获取<ulink url=\"http://www.imagemagick.org/\"> http://www."
+"imagemagick.org/ </ulink>。"
 
 #. Tag: title
 #: installation.xml:220
 #, no-c-format
 msgid "Getting the Source"
-msgstr "ソースの取得"
+msgstr "获取源码"
 
 #. Tag: para
 #: installation.xml:222
@@ -596,8 +579,8 @@ msgid ""
 "Retrieve the PostGIS source archive from the downloads website <ulink url="
 "\"&postgis_download_url;\"> &postgis_download_url; </ulink>"
 msgstr ""
-"ダウンロードサイト<ulink url=\"&postgis_download_url;"
-"\">&postgis_download_url;</ulink>からソースのアーカイブを入手します。"
+"从下载网站获取PostGIS源码包<ulink url=\"&postgis_download_url;\"> "
+"&postgis_download_url; </ulink>"
 
 #. Tag: programlisting
 #: installation.xml:229
@@ -616,8 +599,8 @@ msgid ""
 "This will create a directory called <varname>postgis-&last_release_version;</"
 "varname> in the current working directory."
 msgstr ""
-"これで、カレントディレクトリの下に<varname>postgis-&last_release_version;</"
-"varname>ができます。"
+"上述命令会在当前目录下生成一个名为<varname>postgis-&last_release_version;</"
+"varname>的子目录。"
 
 #. Tag: para
 #: installation.xml:237
@@ -627,9 +610,9 @@ msgid ""
 "apache.org/\"> svn </ulink> repository <ulink url=\"http://svn.osgeo.org/"
 "postgis/trunk/\"> http://svn.osgeo.org/postgis/trunk/ </ulink> ."
 msgstr ""
-"もしくは<ulink url=\"http://subversion.apache.org/\">svn</ulink>レポジトリ"
-"<ulink url=\"http://svn.osgeo.org/postgis/trunk/\">http://svn.osgeo.org/"
-"postgis/trunk/</ulink>からチェックアウトします。"
+"另一种方式是从<ulink url=\"http://subversion.apache.org/\"> svn </ulink>仓库"
+"<ulink url=\"http://svn.osgeo.org/postgis/trunk/\"> http://svn.osgeo.org/"
+"postgis/trunk/ </ulink>中检出(checkout)出源码。"
 
 #. Tag: programlisting
 #: installation.xml:249
@@ -648,14 +631,14 @@ msgid ""
 "Change into the newly created <varname>postgis-&last_release_version;</"
 "varname> directory to continue the installation."
 msgstr ""
-"新しく作られた<varname>postgis-&last_release_version;</varname>ディレクトトリ"
-"に移動して、インストールを続けます。"
+"切换至新创建的<varname>postgis-&last_release_version;</varname>目录，继续安"
+"装。"
 
 #. Tag: title
 #: installation.xml:259
 #, no-c-format
 msgid "Compiling and Install from Source: Detailed"
-msgstr "ソースからのコンパイルとインストール: 詳細"
+msgstr "用源码编译并安装:详细步骤"
 
 #. Tag: para
 #: installation.xml:262
@@ -665,9 +648,8 @@ msgid ""
 "many cases compilation is only necessary if you want the most bleeding edge "
 "versions or you are a package maintainer."
 msgstr ""
-"多くのOSで、ビルドされたPostgreSQL/PostGISパッケージがあります。多くの場合、"
-"コンパイルが必要なのは、最もひどい最先端の版が欲しい場合やパッケージメンテナ"
-"ンスを行う人ぐらいです。"
+"许多操作系统现在已经预安装了PostgreSQL/PostGIS包。在许多情况下，如果你想使用"
+"最前沿的版本或者你是一个软件包的维护者，才需要编译。"
 
 #. Tag: para
 #: installation.xml:267
@@ -679,11 +661,10 @@ msgid ""
 "User contributed compile guides</ulink> and <ulink url=\"http://trac.osgeo."
 "org/postgis/wiki/DevWikiMain\">PostGIS Dev Wiki</ulink>."
 msgstr ""
-"本節では、一般的なコンパイル手順を示します。Windows用や他のOS用等にコンパイル"
-"するなら、<ulink url=\"http://trac.osgeo.org/postgis/wiki/UsersWikiInstall"
-"\">PostGIS User contributed compile guides</ulink>や<ulink url=\"http://trac."
-"osgeo.org/postgis/wiki/DevWikiMain\">PostGIS Dev Wiki</ulink>で、より詳細な助"
-"けが見つかるかも知れません。"
+"本节包含一般编译说明，如果您正在编译Windows或其他操作系统，您可以在<ulink "
+"url=\"http://trac.osgeo.org/postgis/wiki/UsersWikiInstall\">PostGIS User "
+"contributed compile guides</ulink>和 <ulink url=\"http://trac.osgeo.org/"
+"postgis/wiki/DevWikiMain\">PostGIS Dev Wiki</ulink>找到额外的更详细的帮助。"
 
 #. Tag: para
 #: installation.xml:269
@@ -692,9 +673,8 @@ msgid ""
 "Pre-Built Packages for various OS are listed in <ulink url=\"http://trac."
 "osgeo.org/postgis/wiki/UsersWikiPackages\">PostGIS Pre-built Packages</ulink>"
 msgstr ""
-"多くのOS用のビルド済みパッケージの一覧は<ulink url=\"http://trac.osgeo.org/"
-"postgis/wiki/UsersWikiPackages\">PostGIS Pre-built Packages</ulink>にありま"
-"す。"
+"不同操作系统预安装的包在如下地址列出：<ulink url=\"http://trac.osgeo.org/"
+"postgis/wiki/UsersWikiPackages\">PostGIS Pre-built Packages</ulink>"
 
 #. Tag: para
 #: installation.xml:270
@@ -708,12 +688,12 @@ msgid ""
 "anything exciting happens. You can use these to experiment with the in "
 "progress releases of PostGIS"
 msgstr ""
-"Windowsユーザの場合は、スタックビルダか、<ulink url=\"http://www.postgis.org/"
-"download/windows/\">PostGIS Windows download site</ulink>から安定版を得ること"
-"ができます。また、週に1回か2回、刺激的なことがあれば随時ビルドを行っている"
-"<ulink url=\"http://www.postgis.org/download/windows/experimental.php\">very "
-"bleeding-edge windows experimental builds</ulink>もあります。これらはPostGIS"
-"の進行中のリリースでの試験に使用します。"
+"如果你是一个Windows用户，你可以通过Stackbuilder或<ulink url=\"http://www."
+"postgis.org/download/windows/\">PostGIS Windows下载地址</ulink>获取稳定的构"
+"建。我们还有一个<ulink url=\"http://www.postgis.org/download/windows/"
+"experimental.php\">最新的Windows试验版本</ulink>，这些版本通常一周更新一次或"
+"两次或任何时候进行一些令人激动的功能更新。你可以根据PostGIS进展发布使用这些功"
+"能。"
 
 #. Tag: para
 #: installation.xml:275
@@ -725,10 +705,10 @@ msgid ""
 "against PostgreSQL versions &min_postgres_version; or higher. Earlier "
 "versions of PostgreSQL are <emphasis>not</emphasis> supported."
 msgstr ""
-"PostGISモジュールは、PostgreSQLバックエンドサーバの拡張です。PostGIS "
-"&last_release_version;では、コンパイルのために、完全なPostgreSQLサーバヘッダ"
-"が<emphasis>必要です</emphasis>。PostgreSQL &last_release_version;以上でビル"
-"ドできます。古い版のPostgreSQLは<emphasis>サポートされません</emphasis>。"
+"PostGIS模块是PostgreSQL服务器端的一个扩展。因此，为了编译PostGIS "
+"&last_release_version;，<emphasis>必须</emphasis> 拥有完整的PostgreSQL服务器"
+"头文件访问权限。这个版本的PostGIS可以在PostgreSQL版本 &min_postgres_version; "
+"或更高的版本编译。<emphasis>不</emphasis>支持早期版本的PostgreSQL数据库。"
 
 #. Tag: para
 #: installation.xml:283
@@ -738,9 +718,8 @@ msgid ""
 "PostgreSQL. <ulink url=\"http://www.postgresql.org\"> http://www.postgresql."
 "org </ulink> ."
 msgstr ""
-"PostgreSQLをインストールしていないならPostgreSQLインストールガイドを参照して"
-"下さい。<ulink url=\"http://www.postgresql.org/\">http://www.postgresql.org/"
-"</ulink>にあります。"
+"如果你还没有安装PostgreSQL，参阅PostgreSQL安装指南。<ulink url=\"http://www."
+"postgresql.org\"> http://www.postgresql.org </ulink>。"
 
 #. Tag: para
 #: installation.xml:293
@@ -749,14 +728,14 @@ msgid ""
 "For GEOS functionality, when you install PostgresSQL you may need to "
 "explicitly link PostgreSQL against the standard C++ library:"
 msgstr ""
-"GEOS機能を有効にするために、PostgreSQLをインストール時に明示的に標準C++ライブ"
-"ラリに対する明示的なリンクが必要になる場合があります。"
+"关于 GEOS 功能,当安装PostgresSQL的时候，你可能需要显式地使用C++标准的库来链接"
+"（译者注：C/C++代码需要经过编译和链接两个阶段才能生成可执行程序）:"
 
 #. Tag: programlisting
 #: installation.xml:298
 #, no-c-format
 msgid "LDFLAGS=-lstdc++ ./configure [YOUR OPTIONS HERE]"
-msgstr "LDFLAGS=-lstdc++ ./configure [コンフィギュアオプション]"
+msgstr "LDFLAGS=-lstdc++ ./configure [YOUR OPTIONS HERE]"
 
 #. Tag: para
 #: installation.xml:300
@@ -767,10 +746,9 @@ msgid ""
 "closed or similar things) try this trick. This will require recompiling your "
 "PostgreSQL from scratch, of course."
 msgstr ""
-"これは、古い開発ツールとインチキC++例外との対話のための応急処置です。怪しい問"
-"題 (望んでいないのにバックエンドが閉じたりそれに近い挙動を起こす)を経験したな"
-"ら、このトリックを試してみて下さい。もちろん、これを行うにはPostgreSQLをはじ"
-"めからコンパイルし直す必要があります。"
+"这是一个处理使用更老的开发工具产生的一个“虚假”的C++异常解决方案。如果你遇到过"
+"这些奇怪的问题（后端意外关闭或类似的东西）尝试这个小技巧。这将当然需要重新编"
+"译你的PostgreSQL从零开始。"
 
 #. Tag: para
 #: installation.xml:308
@@ -779,15 +757,14 @@ msgid ""
 "The following steps outline the configuration and compilation of the PostGIS "
 "source. They are written for Linux users and will not work on Windows or Mac."
 msgstr ""
-"次のステップでは、PostGISソースのコンフィギュレーションとコンパイルに概要を記"
-"述します。これらは、Linuxユーザ用に書いてありますので、WindowsやMacでは動作し"
-"ません。"
+"如下步骤概述PostGIS源码安装时的配置和编译参数。这些都是针对Linux用户的，不适"
+"用Windows或Mac用户。"
 
 #. Tag: title
 #: installation.xml:315
 #, no-c-format
 msgid "Configuration"
-msgstr "コンフィギュレーション"
+msgstr "配置参数"
 
 #. Tag: para
 #: installation.xml:317
@@ -797,8 +774,8 @@ msgid ""
 "that will be used to build the source code. This is done by running the "
 "shell script"
 msgstr ""
-"ほとんどのLinuxのインストールと同様に、最初のステップでは、ソースコードのビル"
-"ドに使われるMakefileを生成します。これは、シェルスクリプトが行います。"
+"正如大多数Linux程序安装一样，第一步需要生成文件Makefile，这个文件用于编译源"
+"码。通过运行shell脚本来完成这个事情"
 
 #. Tag: para
 #: installation.xml:327
@@ -810,11 +787,9 @@ msgid ""
 "<command>./configure</command>, the script accepts several parameters for "
 "those who have the required libraries and programs in non-standard locations."
 msgstr ""
-"パラメータを付けない場合には、このコマンドは自動で、PostGISのソースコードのビ"
-"ルドを行うのに必要なコンポーネントやライブラリをシステム上で探します。"
-"<command>./configure</command>とするのが一般的な使い方ですが、標準的でない位"
-"置に必要なライブラリやプログラムを置いてある場合のために、いくつかのパラメー"
-"タを受け付けます。"
+"没有更多的参数，这个命令将会在你的系统上尝试自动寻找所需要的组件和所需的库来"
+"编译PostGIS源码。虽然这是<command>./configure</command>的最常见的用法，这个脚"
+"本也接受那些编译PostGIS源码所需要的包和库不在标准位置的其他参数。"
 
 #. Tag: para
 #: installation.xml:336
@@ -824,9 +799,8 @@ msgid ""
 "complete list, use the <command>--help</command> or <command>--help=short</"
 "command> parameters."
 msgstr ""
-"次のリストで、共通して使われるパラメータを示します。 完全なリストについては、"
-"<command>--help</command>または<command>--help=short</command>パラメータを"
-"使って下さい。"
+"下面的列表只显示最常用的参数。想得到一个完整的清单，使用参数<command>--help</"
+"command>或<command>--help=short</command>。"
 
 #. Tag: para
 #: installation.xml:346
@@ -836,8 +810,8 @@ msgid ""
 "to. By default, this location is the same as the detected PostgreSQL "
 "installation."
 msgstr ""
-"PostGISライブラリとSQLスクリプトのインストール先を指定します。デフォルトで"
-"は、検出されたPostgreSQLのインストール先と同じになります。"
+"这是PostGIS库和SQL脚本要安装的目录位置。默认该位置是和PostgreSQL安装位置一"
+"样。"
 
 #. Tag: para
 #: installation.xml:353
@@ -848,10 +822,9 @@ msgid ""
 "org/postgis/ticket/635\"> http://trac.osgeo.org/postgis/ticket/635 </ulink> "
 "to track this bug."
 msgstr ""
-"このパラメータは現在のところ壊れていて、PostgreSQLのインストール先にしかイン"
-"ストールされません。このバグのトラックについては<ulink url=\"http://trac."
-"osgeo.org/postgis/ticket/635\">http://trac.osgeo.org/postgis/ticket/635</"
-"ulink>をご覧ください。"
+"目前该参数不能使用，因为安装包只会把程序安装在PostgreSQL的安装目录中，访问"
+"<ulink url=\"http://trac.osgeo.org/postgis/ticket/635\"> http://trac.osgeo."
+"org/postgis/ticket/635 </ulink> 跟踪这个bug。"
 
 #. Tag: para
 #: installation.xml:368
@@ -863,11 +836,10 @@ msgid ""
 "manually specify a particular PostgreSQL installation that PostGIS will "
 "build against."
 msgstr ""
-"PostgreSQLは、PostGISなどの拡張に対してPostgreSQLのインストール先ディレクトリ"
-"を伝える<command>pg_config</command>というユーティリティを持っています。"
-"PostGISの対象とする特定のPostgreSQLのインストール先を手動で指定する場合に、こ"
-"のパラメータ(<command>--with-pgconfig=/path/to/pg_config</command>)を使いま"
-"す。"
+"PostgreSQL 提供了一个实用的命令叫做<command>pg_config</command>来让一些扩展比"
+"如PostGIS来定位PostgreSQL的安装目录。使用这个参数（<command>--with-pgconfig=/"
+"path/to/pg_config</command>）来手动指定PostGIS安装时依赖的PostgreSQL的安装位"
+"置。"
 
 #. Tag: para
 #: installation.xml:382
@@ -879,11 +851,9 @@ msgid ""
 "gdalconfig=/path/to/gdal-config</command>) to manually specify a particular "
 "GDAL installation that PostGIS will build against."
 msgstr ""
-"必須ライブラリであるGDALは、ラスタ機能に必要な機能を提供します。GDALには、イ"
-"ンストール先ディレクトリをインストールスクリプトに伝える<command>gdal-"
-"config</command>があります。PostGISのビルドに使う特定のGDALを手動で指定する場"
-"合に、このパラメータ (<command>--with-gdalconfig=/path/to/gdal-config</"
-"command>)を使います。"
+"GDAL是一个必须的库，提供栅格功能支持 ，<command>gdal-config</command>命令用来"
+"定位GDAL库的安装目录，使用该参数 (<command>--with-gdalconfig=/path/to/gdal-"
+"config</command>) 来手动指定PostGIS安装时依赖的GDAL的安装位置。"
 
 #. Tag: para
 #: installation.xml:396
@@ -895,11 +865,9 @@ msgid ""
 "to/geos-config</command>) to manually specify a particular GEOS installation "
 "that PostGIS will build against."
 msgstr ""
-"必須のジオメトリライブラリであるGEOSには、ソフトウェアのインストール時にGEOS"
-"のインストール先ディレクトリを伝える<command>geos-config</command>というユー"
-"ティリティがあります。PostGISのビルドに使う特定のGEOSを手動で指定する場合に、"
-"このパラメータ (<command>--with-geosconfig=/path/to/geos-config</command>)を"
-"使います。"
+"GEOS是一个必须的几何类型库，提供了一个实用命令叫做<command>geos-config</"
+"command>用来定位GEOS库的安装目录，使用该参数 (<command>--with-geosconfig=/"
+"path/to/geos-config</command>) 来手动指定PostGIS安装时依赖的GEOS的安装位置。"
 
 #. Tag: para
 #: installation.xml:410
@@ -913,12 +881,11 @@ msgid ""
 "with-xml2config=/path/to/xml2-config</command>) to manually specify a "
 "particular LibXML installation that PostGIS will build against."
 msgstr ""
-"LibXMLはGeomFromKML/GML処理を行うのに必須のライブラリです。通常はlibxmlをイン"
-"ストールしているなら発見されますが、発見できない場合や特定の版を使用したい場"
-"合は、<filename>xml2-config</filename>を指定してインストールスクリプトに"
-"LibXMLのインストール先ディレクトリを伝えます。PostGISのビルドに使う特定の"
-"LibXMLを手動で指定する場合に、このパラメータ (<command>>--with-xml2config=/"
-"path/to/xml2-config</command>)を使います。"
+"LibXML 是一个处理GeomFromKML/GML 所必须的库。如果你安装了libxml，那么就可以找"
+"到，如果没有安装或者你需要一个特定版本，你需要让PostGIS指向<filename>xml2-"
+"config</filename>配置文件来定位LibXML的安装目录。使用该参数 (<command>>--"
+"with-xml2config=/path/to/xml2-config</command>) 来手动指定PostGIS安装时依赖的"
+"LibXML的安装位置。"
 
 #. Tag: para
 #: installation.xml:428
@@ -928,15 +895,14 @@ msgid ""
 "(<command>--with-projdir=/path/to/projdir</command>) to manually specify a "
 "particular Proj4 installation directory that PostGIS will build against."
 msgstr ""
-"Proj4はPostGISに必須の投影変換ライブラリです。PostGISのビルドに使う特定の"
-"Proj4のディレクトリを手動で指定する場合は、このパラメータ (<command>--with-"
-"projdir=/path/to/projdir</command>)を使います。"
+"Proj4 是PostGIS所需要的一个投影库。使用该参数 (<command>--with-projdir=/path/"
+"to/projdir</command>)来手动指定PostGIS安装时依赖的Proj4的安装位置。"
 
 #. Tag: para
 #: installation.xml:440
 #, no-c-format
 msgid "Directory where iconv is installed."
-msgstr "iconvのインストール先ディレクトリを指定します。"
+msgstr "iconv程序的安装目录。"
 
 #. Tag: para
 #: installation.xml:449
@@ -948,10 +914,10 @@ msgid ""
 "specify a particular JSON-C installation directory that PostGIS will build "
 "against."
 msgstr ""
-"<ulink url=\"http://oss.metaparadigm.com/json-c/\">JSON-C</ulink>は、MITライ"
-"センスのJSONライブラリで、PostGISのST_GeomFromJSONに必須です。PostGISのビルド"
-"に使う特定のJSON-Cを手動で指定する場合に、このパラメータ (<command>--with-"
-"jsondir=/path/to/jsondir</command>)を使います。"
+"<ulink url=\"http://oss.metaparadigm.com/json-c/\">JSON-C</ulink>是MIT授权的"
+"JSON 库，是PostGIS函数ST_GeomFromJSON 所需要的。使用该参数 (<command>--with-"
+"jsondir=/path/to/jsondir</command>) 来手动指定PostGIS安装时依赖的JSON-C的安装"
+"位置。"
 
 #. Tag: para
 #: installation.xml:461
@@ -963,10 +929,10 @@ msgid ""
 "command>) to manually specify a particular PCRE installation directory that "
 "PostGIS will build against."
 msgstr ""
-"<ulink url=\"http://www.pcre.org/\">PCRE</ulink>は、BSDライセンスのPerl互換正"
-"規表現ライブラリです。住所標準化エクステンションに必須です。PostGISのビルド対"
-"象としている特定のPCREを手動で指定する場合に、このパラメータ (<command>--"
-"with-pcredir=/path/to/pcredir</command>)を使います。"
+"<ulink url=\"http://www.pcre.org/\">PCRE</ulink>（Perl Compatible Regular "
+"Expression）是BSD授权的Perl兼容的正则表达式库，是address_standardizer扩展所需"
+"的。使用参数(<command>--with-pcredir=/path/to/pcredir</command>) 来手动指定"
+"PostGIS安装时依赖的PCRE的安装目录。"
 
 #. Tag: para
 #: installation.xml:473
@@ -975,9 +941,8 @@ msgid ""
 "Compile the data import GUI (requires GTK+2.0). This will create shp2pgsql-"
 "gui graphical interface to shp2pgsql."
 msgstr ""
-"データインポートGUI (GTK+2.0が必要)をコンパイルします。このパラメータによっ"
-"て、shp2pgsql-guiという、shp2pgsqlのグラフィカルユーザインタフェースが作成さ"
-"れます。"
+"添加GUI对导入数据的支持 (需要 GTK+2.0)。该参数会为shp2pgsql创建一个shp2pgsql-"
+"gui 图形化页面。"
 
 #. Tag: para
 #: installation.xml:482
@@ -987,10 +952,8 @@ msgid ""
 "&last_release_version; library and rtpostgis.sql file. This may not be "
 "required in final release as plan is to build in raster support by default."
 msgstr ""
-"ラスタ機能付きでコンパイルします。これによりrtpostgis-&last_release_version;"
-"ライブラリとrtpostgis.sqlファイルが生成されます。最終リリースでは、デフォルト"
-"でラスタ機能付きにする予定ですので、このパラメータ自体は不要になる可能性があ"
-"ります。"
+"添加栅格功能支持。这会构建rtpostgis-&last_release_version; 库和 rtpostgis."
+"sql 文件。在PostGIS最终版本中可能不需要该参数，因为默认会添加栅格功能支持。"
 
 #. Tag: para
 #: installation.xml:491
@@ -1000,9 +963,8 @@ msgid ""
 "is no corresponding library as all logic needed for topology is in postgis-"
 "&last_release_version; library."
 msgstr ""
-"トポロジ機能付きでコンパイルします。これによりtopology.sqlファイルが生成され"
-"ます。トポロジに必要なロジックは全てpostgis-&last_release_version;ライブラリ"
-"内に作られるので、関連ライブラリはありません。"
+"添加拓扑功能支持。该参数会生成topology.sql 文件。在postgis-"
+"&last_release_version;库中没有拓扑功能所需要的所有对应的库。"
 
 #. Tag: para
 #: installation.xml:500
@@ -1017,13 +979,11 @@ msgid ""
 "used for international help/label support for the GUI loader which is not "
 "yet documented and still experimental."
 msgstr ""
-"デフォルトでは、gettextの検出とこれを用いたコンパイルを試みますが、ローダ破損"
-"を引き起こす非互換性問題のもとで実行する場合には、このコマンドで無効にできま"
-"す。これを使ったコンフィギュレーションによって解決する問題の例は<ulink url="
-"\"http://trac.osgeo.org/postgis/ticket/748\">http://trac.osgeo.org/postgis/"
-"ticket/748</ulink>にあります。ご注意: これを切ることで多くの機能がなくなるわ"
-"けではありません。まだ文書化されていなくて試験段階であるGUIローダにおける内部"
-"のヘルプ/ラベル機能に使われています。"
+"默认PostGIS会试着检测gettext支持并添加编译支持。然而如果你编译时候出现了编译"
+"问题导致终止，你可以使用该参数完全禁用它。参考<ulink url=\"http://trac.osgeo."
+"org/postgis/ticket/748\">http://trac.osgeo.org/postgis/ticket/748</ulink>获取"
+"解决该问题的样例。注意：关掉这个参数，你不会丢失很多功能。这个只是用于GUI 装"
+"载功能的帮助功能，目前没有相关的帮助文档并且也只是试验功能。"
 
 #. Tag: para
 #: installation.xml:511
@@ -1033,9 +993,8 @@ msgid ""
 "<varname>PATH</varname> is an optional argument that allows to specify an "
 "alternate PATH to sfcgal-config."
 msgstr ""
-"デフォルトでは、このスイッチなしではSFCGAL対応でインストールされません。"
-"<varname>PATH</varname>は、sfcgal-configへのパスを指定することができる追加的"
-"な引数です。"
+"没有该选项，PostGIS 默认不会安装sfcgal支持。<varname>PATH</varname>是一个可选"
+"参数，允许为sfcgal-config指定备用PATH。"
 
 #. Tag: para
 #: installation.xml:519
@@ -1045,8 +1004,8 @@ msgid ""
 "postgis/trunk/\"> repository </ulink> , the first step is really to run the "
 "script"
 msgstr ""
-"PostGISをSVN<ulink url=\"http://svn.osgeo.org/postgis/trunk/\">レポジトリ</"
-"ulink>から得る場合には、はじめに次のスクリプトを実行します。"
+"如果你通过SVN <ulink url=\"http://svn.osgeo.org/postgis/trunk/\"> repository "
+"</ulink>获取PostGIS，第一步真正要做的是执行命令"
 
 #. Tag: para
 #: installation.xml:531
@@ -1055,8 +1014,7 @@ msgid ""
 "This script will generate the <command>configure</command> script that in "
 "turn is used to customize the installation of PostGIS."
 msgstr ""
-"このスクリプトによって<command>configure</command>スクリプトが生成されます。"
-"これはPostGISのインストールに関するカスタマイズに使われます。"
+"该脚本会生成<command>configure</command>命令脚本，并用于定制PostGIS的安装。"
 
 #. Tag: para
 #: installation.xml:536
@@ -1066,14 +1024,14 @@ msgid ""
 "command> is not necessary as <command>configure</command> has already been "
 "generated."
 msgstr ""
-"PostGISをアーカイブファイルで入手する場合には、<command>configure</command>が"
-"既に生成されているので<command>./autogen.sh</command>は不要です。"
+"如果你通过tar包来获取PostGIS，没必要执行脚本<command>./autogen.sh</command>，"
+"因为<command>configure</command> 脚本已经生成了。"
 
 #. Tag: title
 #: installation.xml:545
 #, no-c-format
 msgid "Building"
-msgstr "ビルド"
+msgstr "构建程序包"
 
 #. Tag: para
 #: installation.xml:547
@@ -1081,8 +1039,7 @@ msgstr "ビルド"
 msgid ""
 "Once the Makefile has been generated, building PostGIS is as simple as "
 "running"
-msgstr ""
-"Makefileが生成されたら、PostGISのビルドは、次のコマンドを実行するだけです。"
+msgstr "一旦Makefile已经生成了，构建PostGIS是很容易的事情，只需要运行"
 
 #. Tag: para
 #: installation.xml:556
@@ -1091,8 +1048,8 @@ msgid ""
 "The last line of the output should be \"<code>PostGIS was built "
 "successfully. Ready to install.</code>\""
 msgstr ""
-"出力の最後の行に\"<code>PostGIS was built successfully. Ready to install.</"
-"code>\"と出れば終わりです。"
+"上面的命令最后输出行应该是 \"<code>PostGIS was built successfully. Ready to "
+"install.</code>\""
 
 #. Tag: para
 #: installation.xml:561
@@ -1105,11 +1062,10 @@ msgid ""
 "topology_comments.sql are also packaged in the tar.gz distribution in the "
 "doc folder so no need to make comments if installing from the tar ball."
 msgstr ""
-"PostGIS 1.4.0版からは、全ての関数に文書から生成されるコメントが付きます。これ"
-"らのコメントを後からインストールするには、次のコマンドを実行しますが、docbook"
-"が必要です。アーカイブファイルからインストールする場合は、postgis_comments."
-"sql, raster_comments.sql, topology_comments.sqlは、docフォルダにあるので、コ"
-"メントを作成する必要はありません。"
+"从PostGIS v1.4.0版本起,所有的函数都会从文档中生成注释。如果你想安装这些注释到"
+"你的空间数据库中，执行需要docbook库的命令。 postgis_comments.sql 和其他包注释"
+"的脚本文件raster_comments.sql, topology_comments.sql 也打包在tar.gz包的doc目"
+"录下面，所以如果是从tar包安装，就不再需要make comments命令了。"
 
 #. Tag: command
 #: installation.xml:571 installation.xml:595
@@ -1128,12 +1084,12 @@ msgid ""
 "<filename>raster_cheatsheet.html</filename>, <filename>postgis_cheatsheet."
 "html</filename>"
 msgstr ""
-"PostGIS 2.0で導入されました。早見表に、または学習中の方のハンドアウトに適して"
-"いるHTMLチートシートを生成します。xsltprocが必要で、"
+"PostGIS 2.0引入的东西：make cheatsheets。该命令会生成HTML文档，用于新手参考学"
+"习。该命令需要xsltproc库来生成4个doc目录下的HTML文件"
 "<filename>topology_cheatsheet.html</filename>, "
 "<filename>tiger_geocoder_cheatsheet.html</filename>, "
 "<filename>raster_cheatsheet.html</filename>, <filename>postgis_cheatsheet."
-"html</filename>の4ファイルが生成されます。"
+"html</filename>"
 
 #. Tag: para
 #: installation.xml:579
@@ -1143,8 +1099,8 @@ msgid ""
 "url=\"http://www.postgis.us/study_guides\">PostGIS / PostgreSQL Study "
 "Guides</ulink>"
 msgstr ""
-"HTMLとPDFのビルド済みのものは<ulink url=\"http://www.postgis.us/study_guides"
-"\">PostGIS / PostgreSQL Study Guides</ulink>にあります。"
+"你可以从<ulink url=\"http://www.postgis.us/study_guides\">PostGIS / "
+"PostgreSQL Study Guides</ulink>下载一些可用的预发布HTML和PDF文档"
 
 #. Tag: command
 #: installation.xml:582
@@ -1156,7 +1112,7 @@ msgstr "make cheatsheets"
 #: installation.xml:587
 #, no-c-format
 msgid "Building PostGIS Extensions and Deploying them"
-msgstr "PostGISエクステンションのビルドとデプロイ"
+msgstr "构建PostGIS扩展并部署 "
 
 #. Tag: para
 #: installation.xml:589
@@ -1165,8 +1121,7 @@ msgid ""
 "The PostGIS extensions are built and installed automatically if you are "
 "using PostgreSQL 9.1+."
 msgstr ""
-"PostgreSQL 9.1以上を使用している場合は、PostGISエクステンションが自動的にビル"
-"ド、インストールされます。"
+"如果你使用的是PostgreSQL 9.1+版本数据库，PostGIS 扩展是自动构建和安装的。"
 
 #. Tag: para
 #: installation.xml:592
@@ -1176,9 +1131,8 @@ msgid ""
 "descriptions first. These get built if you have docbook installed. You can "
 "also manually build with the statement:"
 msgstr ""
-"ソースレポジトリからビルドしている場合は、関数の記述を最初にビルドする必要が"
-"あります。これらは、docbookがインストールされている時にビルドされます。手動で"
-"インストールするには次のようにします。"
+"如果你从源码构建的，你需要首先生成函数的描述。如果你安装了docbook库，这些会生"
+"成。你也可以手动使用如下语句构建："
 
 #. Tag: para
 #: installation.xml:597
@@ -1187,8 +1141,8 @@ msgid ""
 "Building the comments is not necessary if you are building from a release "
 "tar ball since these are packaged pre-built with the tar ball already."
 msgstr ""
-"アーカイブファイルからのビルドの場合は、ビルド済みのものがあるので、コメント"
-"のビルドは必須ではありません。"
+"如果你的程序是tar包，生成函数的注释不是必须的，因为这些已经在tar 包中预安装"
+"了。"
 
 #. Tag: para
 #: installation.xml:598
@@ -1199,13 +1153,13 @@ msgid ""
 "build from the extensions folders or copy files if you need them on a "
 "different server."
 msgstr ""
-"PostgreSQL 9.1を対象にビルドしている場合は、extensionsは自動的にmake install"
-"処理の一部としてビルドするべきです。必要ならextensionsフォルダからビルドでき"
-"ますし、他のサーバで必要ならファイルの複製ができます。"
+"如果你打包时候依赖PostgreSQL 9.1，自动安装扩展成为make install进程的一个步"
+"骤。当然如果需要的情况下可以通过扩展目录来构建，或者在一个不同的服务器上面通"
+"过拷贝的文件来构建。"
 
 #. Tag: programlisting
 #: installation.xml:600
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "cd extensions\n"
 "cd postgis\n"
@@ -1240,30 +1194,30 @@ msgstr ""
 "cd extensions\n"
 "cd postgis\n"
 "make clean\n"
-"make \n"
+"make\n"
 "make install\n"
 "cd ..\n"
 "cd postgis_topology\n"
 "make clean\n"
-"make \n"
+"make\n"
 "make install\n"
 "cd ..\n"
 "cd postgis_sfcgal\n"
 "make clean\n"
-"make \n"
+"make\n"
 "make install\n"
 "\n"
 "cd ..\n"
 "cd address_standardizer\n"
 "make clean\n"
-"make \n"
+"make\n"
 "make install\n"
 "make installcheck\n"
 "\n"
 "cd ..\n"
 "cd postgis_tiger_geocoder\n"
 "make clean\n"
-"make \n"
+"make\n"
 "make install\n"
 "make installcheck"
 
@@ -1276,9 +1230,9 @@ msgid ""
 "to another as long as you have the PostGIS binaries already installed on "
 "your servers."
 msgstr ""
-"エクステンションファイルは、OSに関係なく、常に同じ版のPostGISと同じです。"
-"PostGISバイナリを既にインストールしている限りは、エクステンションファイルをあ"
-"るOSから別のものに複写して大丈夫です。"
+"无论操作系统是怎样的，对于同一个版本的PostGIS，扩展文件是相同的，因此从一种操"
+"作系统拷贝扩展文件到另一种都是可以的，只要你在你的服务器上面安装了PostGIS的二"
+"进制程序。"
 
 #. Tag: para
 #: installation.xml:603
@@ -1290,10 +1244,9 @@ msgid ""
 "filename> folder of your PostgreSQL install as well as the needed binaries "
 "for regular PostGIS if you don't have them already on the server."
 msgstr ""
-"開発用と異なる別のサーバでエクステンションを手動でインストールしたい場合は、"
-"サーバにない時に必要となる通常のPostGISのバイナリだけでなく、次のファイルを"
-"extensionsフォルダからPostgreSQLインストール先の<filename>PostgreSQL / "
-"share / extension</filename>フォルダに複写します。"
+"如果你想在除了你的开发机器职位的其他服务器上面手动安装扩展，你需要从扩展程序"
+"的目录拷贝如下文件到你的目的机器上的PostgreSQL安装目录下的/ share / extension"
+"目录以及所需要的PostGIS二进制程序（如果目的机器没有安装PostGIS）"
 
 #. Tag: para
 #: installation.xml:610
@@ -1303,8 +1256,8 @@ msgid ""
 "the extension to install if not specified. <filename>postgis.control, "
 "postgis_topology.control</filename>."
 msgstr ""
-"指定されていない場合のインストールするエクステンションの版等の情報を示す制御"
-"ファイ<filename>postgis.control, postgis_topology.control</filename>。"
+"如果没有特别指出，下面都是要安装扩展的一些信息比如版本之类的控制文件。"
+"<filename>postgis.control, postgis_topology.control</filename>。"
 
 #. Tag: para
 #: installation.xml:616
@@ -1315,10 +1268,9 @@ msgid ""
 "<filename>extensions/postgis/sql/*.sql</filename>, <filename>extensions/"
 "postgis_topology/sql/*.sql</filename>"
 msgstr ""
-"エクステンションごとの/sqlフォルダにあるファイル全て。<filename>extensions/"
-"postgis/sql/*.sql</filename>, <filename>extensions/postgis_topology/sql/*."
-"sql</filename>はPostgreSQL share/extensionフォルダの最上位に複写する必要があ"
-"ることに注意して下さい。"
+"每个扩展下的目录 /sql 下的所有文件。注意：<filename>extensions/postgis/sql/*."
+"sql</filename>, <filename>extensions/postgis_topology/sql/*.sql</filename>这"
+"些文件需要拷贝到PostgreSQL share/extension目录中"
 
 #. Tag: para
 #: installation.xml:622
@@ -1328,8 +1280,8 @@ msgid ""
 "<varname>postgis_topology</varname> as available extensions in PgAdmin -> "
 "extensions."
 msgstr ""
-"以上を実行すると、PgAdmin -> extensionで<varname>postgis</varname>, "
-"<varname>postgis_topology</varname>が有効なエクステンションとして見えます。"
+"一旦你完成了这些，你在PgAdmin -> extensions中应该能看到<varname>postgis</"
+"varname>, <varname>postgis_topology</varname>是可用的扩展。"
 
 #. Tag: para
 #: installation.xml:623
@@ -1337,13 +1289,11 @@ msgstr ""
 msgid ""
 "If you are using psql, you can verify that the extensions are installed by "
 "running this query:"
-msgstr ""
-"psqlを使う場合は、次のクエリを実行してエクステンションがインストールされてい"
-"ることを確認できます。"
+msgstr "如果你使用psql，你可以通过如下查询来确认扩展是否已经安装了："
 
 #. Tag: programlisting
 #: installation.xml:624
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "SELECT name, default_version,installed_version\n"
 "FROM pg_available_extensions WHERE name LIKE 'postgis%' or name LIKE 'address"
@@ -1363,21 +1313,21 @@ msgid ""
 " postgis_topology             | &last_release_version;         |\n"
 "(6 rows)"
 msgstr ""
-"SELECT name, default_version,installed_version \n"
+"SELECT name, default_version,installed_version\n"
 "FROM pg_available_extensions WHERE name LIKE 'postgis%' or name LIKE 'address"
 "%';\n"
 "\n"
 "             name             | default_version | installed_version\n"
 "------------------------------+-----------------+-------------------\n"
 " address_standardizer         | &last_release_version;         | "
-"&last_release_version; \n"
+"&last_release_version;\n"
 " address_standardizer_data_us | &last_release_version;         | "
-"&last_release_version; \n"
+"&last_release_version;\n"
 " postgis                      | &last_release_version;         | "
-"&last_release_version; \n"
+"&last_release_version;\n"
 " postgis_sfcgal               | &last_release_version;         |\n"
 " postgis_tiger_geocoder       | &last_release_version;         | "
-"&last_release_version; \n"
+"&last_release_version;\n"
 " postgis_topology             | &last_release_version;         |\n"
 "(6 rows)"
 
@@ -1392,12 +1342,11 @@ msgid ""
 "<varname>extensions</varname> section of the database browser tree and will "
 "even allow upgrade or uninstall by right-clicking."
 msgstr ""
-"クエリを行ったデータベースにエクステンションがインストールされている場合は、"
-"<varname>installed_version</varname>カラムに記載が見えます。レコードが返って"
-"こない場合は、PostGIS EXTENSIONがインストールされていないことになります。"
-"PgAdmin III 1.14以上では、データベースブラウザツリーの<varname>extensions</"
-"varname>セクションで提供されていて、右クリックでアップグレードまたアンインス"
-"トールできます。"
+"如果你的查询结果表示你已经在数据库中安装了扩展，你可以在查询出的列"
+"<varname>installed_version</varname>中看到。如果你没有查询到记录，这意味着你"
+"没有在你的服务器上面安装好PostGIS扩展。PgAdmin III 1.14+ 也会在数据库浏览树的"
+"<varname>extensions</varname>下提示这一信息，甚至可以通过右击来运行升级或卸载"
+"扩展。"
 
 #. Tag: para
 #: installation.xml:630
@@ -1407,9 +1356,8 @@ msgid ""
 "your database of choice by either using pgAdmin extension interface or "
 "running these sql commands:"
 msgstr ""
-"有効なエクステンションがある場合、pgAdminエクステンションインタフェースまたは"
-"次のSQLの実行によって、選択したデータベースにPostGISエクステンションをインス"
-"トールできます。"
+"如果扩展已经可用，你可以有两种方式来在你的数据库中安装PostGIS扩展：使用"
+"PgAdmin扩展接口或者运行这些SQL命令："
 
 #. Tag: programlisting
 #: installation.xml:631
@@ -1426,8 +1374,8 @@ msgid ""
 msgstr ""
 "CREATE EXTENSION postgis;\n"
 "CREATE EXTENSION postgis_sfcgal;\n"
-"CREATE EXTENSION fuzzystrmatch; -- postgis_tiger_geocoderに必要\n"
-"-- postgis_tiger_geocoderで使用されるか単独で使われます\n"
+"CREATE EXTENSION fuzzystrmatch; --用于postgis_tiger_geocoder\n"
+"--postgis_tiger_geocoder可选择的使用，或者单独使用\n"
 "CREATE EXTENSION address_standardizer;\n"
 "CREATE EXTENSION address_standardizer_data_us;\n"
 "CREATE EXTENSION postgis_tiger_geocoder;\n"
@@ -1440,19 +1388,19 @@ msgid ""
 "In psql you can use to see what versions you have installed and also what "
 "schema they are installed."
 msgstr ""
-"psqlでは、どの版が、どのスキーマにインストールされているかを見ることができま"
-"す。"
+"在psql中，你可以使用下面代码查看安装了什么版本的PostGIS以及他们在哪个schema中"
+"安装。"
 
 #. Tag: programlisting
 #: installation.xml:634
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "\\connect mygisdb\n"
 "\\x\n"
 "\\dx postgis*"
 msgstr ""
 "\\connect mygisdb\n"
-"\\x \n"
+"\\x\n"
 "\\dx postgis*"
 
 #. Tag: screen
@@ -1516,21 +1464,15 @@ msgid ""
 "extension. These behaviors are built into the current PostgreSQL extension "
 "model, so nothing we can do about it."
 msgstr ""
-"エクステンションのテーブル<varname>spatial_ref_sys</varname>, "
-"<varname>layer</varname>, <varname>topology</varname>は、明示的にバックアップ"
-"できません。それぞれの<varname>postgis</varname>または"
-"<varname>postgis_topology</varname>エクステンションがバックアップされる時のみ"
-"バックアップできます。これは、データベース全体のバックアップの時のみ行われま"
-"す。PostGIS 2.0.1の時点では、データベースがバックアップされる際に、PostGISで"
-"パッケージ化されていないsridレコードのみバックアップされます。パッケージに"
-"入っているsridの変更は巡回せず、変更はそこにあるものと期待されます。PostGIS "
-"2.0.1の時点では、データベースがバックアップされるときにPostGISに入っていない"
-"sridのレコードだけがバックアップされます。PostGISに入っていて後に変更された"
-"sridの変更については巡回しません。問題が見られたら、チケットを発行して下さ"
-"い。エクステンションテーブルの構造は<code>CREATE EXTENSION</code>で生成される"
-"ので、バックアップを行いません。エクステンションの与えられた版と同じものであ"
-"ると仮定されます。この挙動は現在のPostgreSQL エクステンションモデルに組み込ま"
-"れているため、これについては何もできません。"
+"扩展的系统表<varname>spatial_ref_sys</varname>, <varname>layer</varname>, "
+"<varname>topology</varname>不能精确地备份。他们只有在各自的<varname>postgis</"
+"varname>或<varname>postgis_topology</varname>扩展备份时候才能备份，而这种似乎"
+"只有在你备份整个数据库的时候才会发生。从PostGIS 2.0.1开始，当数据库被备份的时"
+"候，只有没有和PostGIS一起的SRID记录才会被备份。所以,不要随便修改SRID值并期望"
+"你能更改成功。如果你发现了问题，在跟踪bug的网站上发一个跟踪单即可。扩展的系统"
+"表结构永远不能够备份，因为他们是使用 <code>CREATE EXTENSION</code> 方式来创建"
+"的，并认定和提供的扩展版本一致。这些行为都内置在当前的PostgreSQL扩展模块中，"
+"因此我们对它什么都不必做。"
 
 #. Tag: para
 #: installation.xml:643
@@ -1543,12 +1485,12 @@ msgid ""
 "<filename>raster_upgrade_22_minor.sql</filename>,"
 "<filename>topology_upgrade_22_minor.sql</filename>."
 msgstr ""
-"この素晴らしいエクステンション機能を使わずに&last_release_version;をインス"
-"トールした場合でもエクステンションベースに変更することができます。まず"
+"如果你没有使用超赞的创建扩展的方式安装&last_release_version;版本，你可以首先"
+"运行如下脚本来把你的PostGIS版本升级到最新的小版本: "
 "<filename>postgis_upgrade_22_minor.sql</filename>,"
 "<filename>raster_upgrade_22_minor.sql</filename>,"
-"<filename>topology_upgrade_22_minor.sql</filename>のアップグレードスクリプト"
-"を実行して最新版にアップグレードします"
+"<filename>topology_upgrade_22_minor.sql</filename>，然后可以基于创建扩展的方"
+"式来安装PostGIS。"
 
 #. Tag: para
 #: installation.xml:644
@@ -1557,8 +1499,8 @@ msgid ""
 "If you installed postgis without raster support, you'll need to install "
 "raster support first (using the full <filename>rtpostgis.sql</filename>"
 msgstr ""
-"ラスタ機能無しでPostGISをインストールした場合には、最初にラスタ機能をインス"
-"トールする必要があります (<filename>rtpostgis.sql</filename>を使います)。"
+"如果你安装PostGIS时候没有添加栅格支持，你需要首先安装栅格功能支持（通过运行脚"
+"本<filename>rtpostgis.sql</filename>）"
 
 #. Tag: para
 #: installation.xml:645
@@ -1566,9 +1508,7 @@ msgstr ""
 msgid ""
 "Then you can run the below commands to package the functions in their "
 "respective extension."
-msgstr ""
-"それから、次のコマンドを実行して、個々のエクステンションについて、関数をパッ"
-"ケージ化します。"
+msgstr "然后你需要执行下面的命令来创建各自的扩展。"
 
 #. Tag: programlisting
 #: installation.xml:646
@@ -1586,13 +1526,13 @@ msgstr ""
 #: installation.xml:652
 #, no-c-format
 msgid "Testing"
-msgstr "テスト"
+msgstr "测试"
 
 #. Tag: para
 #: installation.xml:654
 #, no-c-format
 msgid "If you wish to test the PostGIS build, run"
-msgstr "PostGISのテストを行うには、次のコマンドを実行します。"
+msgstr "如果你想测试打包的PostGIS，执行下面命令"
 
 #. Tag: command
 #: installation.xml:659
@@ -1606,9 +1546,7 @@ msgstr "make check"
 msgid ""
 "The above command will run through various checks and regression tests using "
 "the generated library against an actual PostgreSQL database."
-msgstr ""
-"このコマンドで、実際のPostgreSQLデータベースに対して生成したライブラリを使用"
-"した、様々なチェックとレグレッションテストを行います。"
+msgstr "上面的命令会使用生成的库在PostgreSQL数据库上运行各种检查和回归测试。"
 
 #. Tag: para
 #: installation.xml:668
@@ -1618,9 +1556,8 @@ msgid ""
 "locations, you may need to add their library locations to the "
 "LD_LIBRARY_PATH environment variable."
 msgstr ""
-"PostgreSQL, GEOS または Proj4 を標準の位置にインストールしていない場合には、"
-"環境変数LD_LIBRARY_PATHに、ライブラリの位置を追加する必要があるかも知れませ"
-"ん。"
+"如果你使用的是非标准的PostgreSQL, GEOS, 或 Proj4 位置来配置你的PostGIS程序，"
+"你需要在环境变量LD_LIBRARY_PATH里面添加他们的库位置。"
 
 #. Tag: para
 #: installation.xml:676
@@ -1634,23 +1571,22 @@ msgid ""
 "installation during configuration or be prepared to deal with the impending "
 "headaches."
 msgstr ""
-"現在のところ<command>make check</command>は、チェックを行う際に 環境変数"
-"<code>PATH</code>と<code>PGPORT</code>によっています。コンフィギュレーション"
-"パラメータ<command>--with-pgconfig</command>を使って特定したPostgreSQLでは"
-"<emphasis>ありません</emphasis>。PATHを編集して、コンフィギュレーションの際に"
-"検出したPostgreSQLと一致するようにして下さい。もしくは、間もなく襲ってくる頭"
-"痛の準備をしておいて下さい。"
+"目前命令<command>make check</command>依赖环境变量<code>PATH</code>和 "
+"<code>PGPORT</code>。它<emphasis>不</emphasis>需要使用配置参数<command>--"
+"with-pgconfig</command>指定的PostgreSQL的具体版本，因此配置期间确保修改你的"
+"PATH环境变量是正确的，即该变量可以正确检测到你的PostgreSQL的安装目录，否则就"
+"要做好要处理实现上令人头疼的问题的准备。"
 
 #. Tag: para
 #: installation.xml:688
 #, no-c-format
 msgid ""
 "If successful, the output of the test should be similar to the following:"
-msgstr "成功した場合は、テストの出力は次のようなかんじになります。"
+msgstr "如果运行成功，测试输出会和如下的输出类似："
 
 #. Tag: programlisting
 #: installation.xml:693
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "CUnit - A unit testing framework for C - Version 2.1-2\n"
 "     http://cunit.sourceforge.net/\n"
@@ -2418,8 +2354,8 @@ msgstr ""
 "\n"
 "Elapsed time =    0.298 seconds\n"
 "\n"
-"Creating database 'postgis_reg' \n"
-"Loading PostGIS into 'postgis_reg' \n"
+"Creating database 'postgis_reg'\n"
+"Loading PostGIS into 'postgis_reg'\n"
 "  /projects/postgis/branches/2.2/regress/00-regress-install/share/contrib/"
 "postgis/postgis.sql\n"
 "  /projects/postgis/branches/2.2/regress/00-regress-install/share/contrib/"
@@ -2438,123 +2374,123 @@ msgstr ""
 "\n"
 "Running tests\n"
 "\n"
-" loader/Point .............. ok \n"
-" loader/PointM .............. ok \n"
-" loader/PointZ .............. ok \n"
-" loader/MultiPoint .............. ok \n"
-" loader/MultiPointM .............. ok \n"
-" loader/MultiPointZ .............. ok \n"
-" loader/Arc .............. ok \n"
-" loader/ArcM .............. ok \n"
-" loader/ArcZ .............. ok \n"
-" loader/Polygon .............. ok \n"
-" loader/PolygonM .............. ok \n"
-" loader/PolygonZ .............. ok \n"
-" loader/TSTPolygon ......... ok \n"
-" loader/TSIPolygon ......... ok \n"
-" loader/TSTIPolygon ......... ok \n"
-" loader/PointWithSchema ..... ok \n"
-" loader/NoTransPoint ......... ok \n"
-" loader/NotReallyMultiPoint ......... ok \n"
-" loader/MultiToSinglePoint ......... ok \n"
-" loader/ReprojectPts ........ ok \n"
-" loader/ReprojectPtsGeog ........ ok \n"
-" loader/Latin1 .... ok \n"
-" loader/Latin1-implicit .... ok \n"
-" loader/mfile .... ok \n"
-" dumper/literalsrid ....... ok \n"
-" dumper/realtable ....... ok \n"
-" affine .. ok \n"
-" bestsrid .. ok \n"
-" binary .. ok \n"
-" boundary .. ok \n"
-" cluster .. ok \n"
-" concave_hull .. ok \n"
-" ctors .. ok \n"
-" dump .. ok \n"
-" dumppoints .. ok \n"
-" empty .. ok \n"
-" forcecurve .. ok \n"
-" geography .. ok \n"
-" in_geohash .. ok \n"
-" in_gml .. ok \n"
-" in_kml .. ok \n"
-" in_encodedpolyline .. ok \n"
-" iscollection .. ok \n"
-" legacy .. ok \n"
-" long_xact .. ok \n"
-" lwgeom_regress .. ok \n"
-" measures .. ok \n"
-" operators .. ok \n"
-" out_geometry .. ok \n"
-" out_geography .. ok \n"
-" polygonize .. ok \n"
-" polyhedralsurface .. ok \n"
-" postgis_type_name .. ok \n"
-" regress .. ok \n"
-" regress_bdpoly .. ok \n"
-" regress_index .. ok \n"
-" regress_index_nulls .. ok \n"
-" regress_management .. ok \n"
-" regress_selectivity .. ok \n"
-" regress_lrs .. ok \n"
-" regress_ogc .. ok \n"
-" regress_ogc_cover .. ok \n"
-" regress_ogc_prep .. ok \n"
-" regress_proj .. ok \n"
-" relate .. ok \n"
-" remove_repeated_points .. ok \n"
-" removepoint .. ok \n"
-" setpoint .. ok \n"
-" simplify .. ok \n"
-" simplifyvw .. ok \n"
-" size .. ok \n"
-" snaptogrid .. ok \n"
-" split .. ok \n"
-" sql-mm-serialize .. ok \n"
-" sql-mm-circularstring .. ok \n"
-" sql-mm-compoundcurve .. ok \n"
-" sql-mm-curvepoly .. ok \n"
-" sql-mm-general .. ok \n"
-" sql-mm-multicurve .. ok \n"
-" sql-mm-multisurface .. ok \n"
-" swapordinates .. ok \n"
-" summary .. ok \n"
-" temporal .. ok \n"
-" tickets .. ok \n"
-" twkb .. ok \n"
-" typmod .. ok \n"
-" wkb .. ok \n"
-" wkt .. ok \n"
-" wmsservers .. ok \n"
-" knn .. ok \n"
-" hausdorff .. ok \n"
-" regress_buffer_params .. ok \n"
-" offsetcurve .. ok \n"
-" relatematch .. ok \n"
-" isvaliddetail .. ok \n"
-" sharedpaths .. ok \n"
-" snap .. ok \n"
-" node .. ok \n"
-" unaryunion .. ok \n"
-" clean .. ok \n"
-" relate_bnr .. ok \n"
-" delaunaytriangles .. ok \n"
-" clipbybox2d .. ok \n"
-" subdivide .. ok \n"
-" in_geojson .. ok \n"
-" regress_sfcgal .. ok \n"
-" sfcgal/empty .. ok \n"
-" sfcgal/geography .. ok \n"
-" sfcgal/legacy .. ok \n"
-" sfcgal/measures .. ok \n"
-" sfcgal/regress_ogc_prep .. ok \n"
-" sfcgal/regress_ogc .. ok \n"
-" sfcgal/regress .. ok \n"
-" sfcgal/tickets .. ok \n"
-" sfcgal/concave_hull .. ok \n"
-" sfcgal/wmsservers .. ok \n"
-" sfcgal/approximatemedialaxis .. ok \n"
+" loader/Point .............. ok\n"
+" loader/PointM .............. ok\n"
+" loader/PointZ .............. ok\n"
+" loader/MultiPoint .............. ok\n"
+" loader/MultiPointM .............. ok\n"
+" loader/MultiPointZ .............. ok\n"
+" loader/Arc .............. ok\n"
+" loader/ArcM .............. ok\n"
+" loader/ArcZ .............. ok\n"
+" loader/Polygon .............. ok\n"
+" loader/PolygonM .............. ok\n"
+" loader/PolygonZ .............. ok\n"
+" loader/TSTPolygon ......... ok\n"
+" loader/TSIPolygon ......... ok\n"
+" loader/TSTIPolygon ......... ok\n"
+" loader/PointWithSchema ..... ok\n"
+" loader/NoTransPoint ......... ok\n"
+" loader/NotReallyMultiPoint ......... ok\n"
+" loader/MultiToSinglePoint ......... ok\n"
+" loader/ReprojectPts ........ ok\n"
+" loader/ReprojectPtsGeog ........ ok\n"
+" loader/Latin1 .... ok\n"
+" loader/Latin1-implicit .... ok\n"
+" loader/mfile .... ok\n"
+" dumper/literalsrid ....... ok\n"
+" dumper/realtable ....... ok\n"
+" affine .. ok\n"
+" bestsrid .. ok\n"
+" binary .. ok\n"
+" boundary .. ok\n"
+" cluster .. ok\n"
+" concave_hull .. ok\n"
+" ctors .. ok\n"
+" dump .. ok\n"
+" dumppoints .. ok\n"
+" empty .. ok\n"
+" forcecurve .. ok\n"
+" geography .. ok\n"
+" in_geohash .. ok\n"
+" in_gml .. ok\n"
+" in_kml .. ok\n"
+" in_encodedpolyline .. ok\n"
+" iscollection .. ok\n"
+" legacy .. ok\n"
+" long_xact .. ok\n"
+" lwgeom_regress .. ok\n"
+" measures .. ok\n"
+" operators .. ok\n"
+" out_geometry .. ok\n"
+" out_geography .. ok\n"
+" polygonize .. ok\n"
+" polyhedralsurface .. ok\n"
+" postgis_type_name .. ok\n"
+" regress .. ok\n"
+" regress_bdpoly .. ok\n"
+" regress_index .. ok\n"
+" regress_index_nulls .. ok\n"
+" regress_management .. ok\n"
+" regress_selectivity .. ok\n"
+" regress_lrs .. ok\n"
+" regress_ogc .. ok\n"
+" regress_ogc_cover .. ok\n"
+" regress_ogc_prep .. ok\n"
+" regress_proj .. ok\n"
+" relate .. ok\n"
+" remove_repeated_points .. ok\n"
+" removepoint .. ok\n"
+" setpoint .. ok\n"
+" simplify .. ok\n"
+" simplifyvw .. ok\n"
+" size .. ok\n"
+" snaptogrid .. ok\n"
+" split .. ok\n"
+" sql-mm-serialize .. ok\n"
+" sql-mm-circularstring .. ok\n"
+" sql-mm-compoundcurve .. ok\n"
+" sql-mm-curvepoly .. ok\n"
+" sql-mm-general .. ok\n"
+" sql-mm-multicurve .. ok\n"
+" sql-mm-multisurface .. ok\n"
+" swapordinates .. ok\n"
+" summary .. ok\n"
+" temporal .. ok\n"
+" tickets .. ok\n"
+" twkb .. ok\n"
+" typmod .. ok\n"
+" wkb .. ok\n"
+" wkt .. ok\n"
+" wmsservers .. ok\n"
+" knn .. ok\n"
+" hausdorff .. ok\n"
+" regress_buffer_params .. ok\n"
+" offsetcurve .. ok\n"
+" relatematch .. ok\n"
+" isvaliddetail .. ok\n"
+" sharedpaths .. ok\n"
+" snap .. ok\n"
+" node .. ok\n"
+" unaryunion .. ok\n"
+" clean .. ok\n"
+" relate_bnr .. ok\n"
+" delaunaytriangles .. ok\n"
+" clipbybox2d .. ok\n"
+" subdivide .. ok\n"
+" in_geojson .. ok\n"
+" regress_sfcgal .. ok\n"
+" sfcgal/empty .. ok\n"
+" sfcgal/geography .. ok\n"
+" sfcgal/legacy .. ok\n"
+" sfcgal/measures .. ok\n"
+" sfcgal/regress_ogc_prep .. ok\n"
+" sfcgal/regress_ogc .. ok\n"
+" sfcgal/regress .. ok\n"
+" sfcgal/tickets .. ok\n"
+" sfcgal/concave_hull .. ok\n"
+" sfcgal/wmsservers .. ok\n"
+" sfcgal/approximatemedialaxis .. ok\n"
 " uninstall .  /projects/postgis/branches/2.2/regress/00-regress-install/"
 "share/contrib/postgis/uninstall_sfcgal.sql\n"
 "  /projects/postgis/branches/2.2/regress/00-regress-install/share/contrib/"
@@ -2564,7 +2500,7 @@ msgstr ""
 "Run tests: 118\n"
 "Failed: 0\n"
 "\n"
-"-- if you built --with-gui, you should see this too\n"
+"--如果使用了 --with-gui, 也会看到这个\n"
 "\n"
 "     CUnit - A unit testing framework for C - Version 2.1-2\n"
 "     http://cunit.sourceforge.net/\n"
@@ -2592,17 +2528,16 @@ msgid ""
 "make install is not necessary if you already did make install at root of "
 "PostGIS code folder."
 msgstr ""
-"<varname>postgis_tiger_geocoder</varname>と<varname>address_standardizer</"
-"varname>は、現在は、標準的なPostgreSQLインストールチェックにのみ対応していま"
-"す。これらをテストするには、次のようにします。ご注意: PostGISコードフォルダの"
-"ルートでmake installを既に行っている場合には、make installは重要ではありませ"
-"ん。"
+"<varname>postgis_tiger_geocoder</varname>和<varname>address_standardizer</"
+"varname>扩展，目前仅支持标准PostgreSQL安装检查。要测试它们需要使用下面的代"
+"码。注意：如果您已经在PostGIS代码目录的根目录下执行了make install，那么就不用"
+"再执行一次了。"
 
 #. Tag: para
 #: installation.xml:696
 #, no-c-format
 msgid "For address_standardizer:"
-msgstr "address_standardizer用:"
+msgstr "对于address_standardizer:"
 
 #. Tag: programlisting
 #: installation.xml:697
@@ -2620,7 +2555,7 @@ msgstr ""
 #: installation.xml:699
 #, no-c-format
 msgid "Output should look like:"
-msgstr "出力は次のようなかんじになります。"
+msgstr "输出是这样的："
 
 #. Tag: screen
 #: installation.xml:700
@@ -2664,9 +2599,9 @@ msgid ""
 "available in your PostgreSQL instance. The address_standardizer tests will "
 "also kick in if you built postgis with address_standardizer support:"
 msgstr ""
-"Tiger Geocodeを使う場合には、使用するPostgreSQLインスタンス内にPostGISと"
-"fuzzystrmatchのエクステンションが必要です。PostGISをaddress_standardizer機能"
-"付きでビルドした場合は、address_standardizerのテストも行います。"
+"对于tiger geocoder,请确保您的PostgreSQL实例中有postgis和fuzzystrmatch扩展。 "
+"如果使用了address_standardizer支持构建postgis，那么address_standardizer测试也"
+"将进入："
 
 #. Tag: programlisting
 #: installation.xml:703
@@ -2684,7 +2619,7 @@ msgstr ""
 #: installation.xml:704
 #, no-c-format
 msgid "output should look like:"
-msgstr "出力は次のようなかんじになります。"
+msgstr "输出是这样的："
 
 #. Tag: screen
 #: installation.xml:705
@@ -2736,13 +2671,13 @@ msgstr ""
 #: installation.xml:709
 #, no-c-format
 msgid "Installation"
-msgstr "インストール"
+msgstr "安装"
 
 #. Tag: para
 #: installation.xml:711
 #, no-c-format
 msgid "To install PostGIS, type"
-msgstr "PostGISをインストールするには、次のコマンドを実行します。"
+msgstr "要安装PostGIS，输入"
 
 #. Tag: command
 #: installation.xml:716
@@ -2758,9 +2693,8 @@ msgid ""
 "subdirectory specified by the <command>--prefix</command> configuration "
 "parameter. In particular:"
 msgstr ""
-"これにより、PostGISのインストールファイルが、<command>--prefix</command>パラ"
-"メータで指定した、適切なサブディレクトリに複写されます。次に特筆すべきサブ"
-"ディレクトリを示します。"
+"这会将PostGIS安装文件拷贝到<command>--prefix</command>配置参数指定的子目录"
+"中。特别的："
 
 #. Tag: para
 #: installation.xml:727
@@ -2769,8 +2703,7 @@ msgid ""
 "The loader and dumper binaries are installed in <filename>[prefix]/bin</"
 "filename>."
 msgstr ""
-"ローダとダンパのバイナリのインストール先は<filename>[prefix]/bin</filename>で"
-"す。"
+"load 和 dump 二进制程序安装在目录<filename>[prefix]/bin</filename>下面。"
 
 #. Tag: para
 #: installation.xml:734
@@ -2779,16 +2712,15 @@ msgid ""
 "The SQL files, such as <filename>postgis.sql</filename>, are installed in "
 "<filename>[prefix]/share/contrib</filename>."
 msgstr ""
-"<filename>postgis.sql</filename>などのSQLファイルのインストール先は"
-"<filename>[prefix]/share/contrib</filename>です。"
+"SQL文件，例如<filename>postgis.sql</filename>, 安装在<filename>[prefix]/"
+"share/contrib</filename>下面。"
 
 #. Tag: para
 #: installation.xml:741
 #, no-c-format
 msgid ""
 "The PostGIS libraries are installed in <filename>[prefix]/lib</filename>."
-msgstr ""
-"PostGISライブラリのインストール先は<filename>[prefix]/lib</filename>です。"
+msgstr "PostGIS库安装在<filename>[prefix]/lib</filename>目录下。"
 
 #. Tag: para
 #: installation.xml:748
@@ -2799,9 +2731,9 @@ msgid ""
 "<filename>raster_comments.sql</filename> file, install the sql file by "
 "running"
 msgstr ""
-"先に<command>make comments</command>を実行して<filename>postgis_comments."
-"sql</filename>, <filename>raster_comments.sql</filename>を生成していた場合"
-"は、次のコマンドを実行すると、これらのSQLファイルがインストールされます。"
+"如果你之前运行了<command>make comments</command>命令来生成SQL文件"
+"<filename>postgis_comments.sql</filename>, <filename>raster_comments.sql</"
+"filename>，使用如下命令来安装SQL文件"
 
 #. Tag: command
 #: installation.xml:755
@@ -2819,15 +2751,14 @@ msgid ""
 "dependency of <command>xsltproc</command>."
 msgstr ""
 "<filename>postgis_comments.sql</filename>, <filename>raster_comments.sql</"
-"filename>, <filename>topology_comments.sql</filename>は、<command>xsltproc</"
-"command>の外部依存ができたので、通常のビルドとインストールから切り離されまし"
-"た。"
+"filename>, <filename>topology_comments.sql</filename> 这几个脚本与典型的安装"
+"方式是区别开的，因为他们依赖程序<command>xsltproc</command>。"
 
 #. Tag: title
 #: installation.xml:769
 #, no-c-format
 msgid "Create a spatially-enabled database on PostgreSQL lower than 9.1"
-msgstr "PostgreSQL 9.1より前での空間データベースの作成"
+msgstr "在低于PostgreSQL 9.1版本以下创建一个有空间功能支持的数据库"
 
 #. Tag: para
 #: installation.xml:771
@@ -2835,15 +2766,13 @@ msgstr "PostgreSQL 9.1より前での空間データベースの作成"
 msgid ""
 "The first step in creating a PostGIS database is to create a simple "
 "PostgreSQL database."
-msgstr ""
-"PostGISデータベースを作る最初のステップは、単純なPostgreSQLデータベースの作成"
-"です。"
+msgstr "创建PostGIS数据库的第一步是创建一个PostgreSQL数据库："
 
 #. Tag: command
 #: installation.xml:777 installation.xml:874
 #, no-c-format
 msgid "createdb [yourdatabase]"
-msgstr "createdb [データベース名]"
+msgstr "createdb [yourdatabase]"
 
 #. Tag: para
 #: installation.xml:780
@@ -2855,15 +2784,15 @@ msgid ""
 "command below command. For PostgreSQL 8.4+, this is generally already "
 "installed"
 msgstr ""
-"多くのPostGIS関数は、PL/pgSQL手続き言語で書かれています。次のステップは、PL/"
-"pgSQL言語を新たに作成したデータベースで有効にすることです。次のコマンドを実行"
-"します。PostgreSQL 8.4以上では、通常は既にインストールされています。"
+"许多PostGIS函数是用PL/pgSQL存储过程写的。因此，创建PostGIS数据库之前的下一步"
+"是创建PL/pgSQL语言支持。这个可以通过如下命令实现。对于PostgreSQL 8.4+版本，该"
+"语言已经默认安装了"
 
 #. Tag: command
 #: installation.xml:788
 #, no-c-format
 msgid "createlang plpgsql [yourdatabase]"
-msgstr "createlang plpgsql [データベース名]"
+msgstr "createlang plpgsql [yourdatabase]"
 
 #. Tag: para
 #: installation.xml:791
@@ -2874,15 +2803,15 @@ msgid ""
 "<filename>[prefix]/share/contrib</filename> as specified during the "
 "configuration step)."
 msgstr ""
-"次に、PostGISオブジェクトと関数定義をデータベースにロードします。定義ファイル"
-"<filename>postgis.sql</filename>(コンフィギュレーション段階で指定した"
-"<filename>[prefix]/share/contrib</filename>にあります)をロードします。"
+"现在加载PostGIS 数据库对象和函数定义到数据库中，办法是执行<filename>postgis."
+"sql</filename>脚本文件(该文件在<filename>[prefix]/share/contrib</filename>目"
+"录下，是在配置步骤中指定的)。"
 
 #. Tag: command
 #: installation.xml:799
 #, no-c-format
 msgid "psql -d [yourdatabase] -f postgis.sql"
-msgstr "psql -d [データベース名] -f postgis.sql"
+msgstr "psql -d [yourdatabase] -f postgis.sql"
 
 #. Tag: para
 #: installation.xml:802
@@ -2893,16 +2822,16 @@ msgid ""
 "populate the <varname>spatial_ref_sys</varname> table. This will permit you "
 "to perform ST_Transform() operations on geometries."
 msgstr ""
-"完全なEPSG座標系定義IDセットについては、<filename>spatial_ref_sys.sql</"
-"filename>定義ファイルをロードして<varname>spatial_ref_sys</varname>テーブルを"
-"生成して下さい。これによりジオメトリ関数ST_Transform()が実行できるようになり"
-"ます。"
+"为了得到一个完整的EPSG坐标系的完备记录，你需要执行脚本"
+"<filename>spatial_ref_sys.sql</filename>来插入数据到"
+"<varname>spatial_ref_sys</varname> 表中。有了这些数据，你可以对几何对象数据使"
+"用函数ST_Transform() 来操作。"
 
 #. Tag: command
 #: installation.xml:810
 #, no-c-format
 msgid "psql -d [yourdatabase] -f spatial_ref_sys.sql"
-msgstr "psql -d [データベース名] -f spatial_ref_sys.sql"
+msgstr "psql -d [yourdatabase] -f spatial_ref_sys.sql"
 
 #. Tag: para
 #: installation.xml:813
@@ -2913,29 +2842,27 @@ msgid ""
 "database. The comments can be viewed by simply typing <command>\\dd "
 "[function_name]</command> from a <command>psql</command> terminal window."
 msgstr ""
-"PostGISが持つ関数についての助けとなるコメントを求めるなら、"
-"<filename>postgis_comments.sql</filename>を、データベースにロードします。コメ"
-"ントは、<command>psql</command>ターミナルウィンドウで単に<command>\\dd "
-"[function_name]</command>とすれば見ることができます。ロードは次のようにしま"
-"す。"
+"如果你希望对PostGIS函数添加注释，最后一步是加载<filename>postgis_comments."
+"sql</filename>到你的数据库。这些函数注释可以通过在<command>psql</command>中输"
+"入命令 <command>\\dd [function_name]</command>来查看。"
 
 #. Tag: command
 #: installation.xml:821
 #, no-c-format
 msgid "psql -d [yourdatabase] -f postgis_comments.sql"
-msgstr "psql -d [データベース名] -f postgis_comments.sql"
+msgstr "psql -d [yourdatabase] -f postgis_comments.sql"
 
 #. Tag: para
 #: installation.xml:824
 #, no-c-format
 msgid "Install raster support"
-msgstr "ラスタ機能をインストールします。"
+msgstr "安装栅格功能支持"
 
 #. Tag: command
 #: installation.xml:829
 #, no-c-format
 msgid "psql -d [yourdatabase] -f rtpostgis.sql"
-msgstr "psql -d [データベース名] -f rtpostgis.sql"
+msgstr "psql -d [yourdatabase] -f rtpostgis.sql"
 
 #. Tag: para
 #: installation.xml:832
@@ -2945,27 +2872,26 @@ msgid ""
 "raster function using psql or PgAdmin or any other PostgreSQL tool that can "
 "show function comments"
 msgstr ""
-"ラスタ機能のコメントをインストールします。ラスタ関数ごとの簡易説明が提供され"
-"ます。psqlまたはpgAdmin等の関数コメントを表示できるPostgreSQLツールで使えま"
-"す。"
+"安装栅格功能支持的注释。当你使用psql或PgAdmin或者其他任何PostgreSQL工具时候，"
+"该注释功能会向你介绍每个栅格函数的快速的帮助"
 
 #. Tag: command
 #: installation.xml:838
 #, no-c-format
 msgid "psql -d [yourdatabase] -f raster_comments.sql"
-msgstr "psql -d [データベース名] -f raster_comments.sql"
+msgstr "psql -d [yourdatabase] -f raster_comments.sql"
 
 #. Tag: para
 #: installation.xml:840
 #, no-c-format
 msgid "Install topology support"
-msgstr "トポロジ機能をインストールします。"
+msgstr "安装拓扑功能支持"
 
 #. Tag: command
 #: installation.xml:845
 #, no-c-format
 msgid "psql -d [yourdatabase] -f topology/topology.sql"
-msgstr "psql -d [データベース名] -f topology/topology.sql"
+msgstr "psql -d [yourdatabase] -f topology/topology.sql"
 
 #. Tag: para
 #: installation.xml:848
@@ -2975,30 +2901,27 @@ msgid ""
 "each topology function / type using psql or PgAdmin or any other PostgreSQL "
 "tool that can show function comments"
 msgstr ""
-"トポロジ機能のコメントをインストールします。トポロジ関数/型ごとの簡易説明が提"
-"供されます。psqlまたはpgAdmin等の関数コメントを表示できるPostgreSQLツールで使"
-"えます。"
+"安装拓扑功能注释。当你使用psql或PgAdmin或者其他任何PostgreSQL工具时候，该注释"
+"功能会向你介绍每个拓扑函数和拓扑类型的快速的帮助"
 
 #. Tag: command
 #: installation.xml:854
 #, no-c-format
 msgid "psql -d [yourdatabase] -f topology/topology_comments.sql"
-msgstr "psql -d [データベース名] -f topology/topology_comments.sql"
+msgstr "psql -d [yourdatabase] -f topology/topology_comments.sql"
 
 #. Tag: para
 #: installation.xml:857 installation.xml:894
 #, no-c-format
 msgid ""
 "If you plan to restore an old backup from prior versions in this new db, run:"
-msgstr ""
-"以前の版の古いバックアップを新しいデータベースにリストアする予定の場合には、"
-"次を実行します。"
+msgstr "如果你把之前备份的数据恢复到新的数据库中，执行命令："
 
 #. Tag: command
 #: installation.xml:858 installation.xml:895
 #, no-c-format
 msgid "psql -d [yourdatabase] -f legacy.sql"
-msgstr "psql -d [データベース名] -f legacy.sql"
+msgstr "psql -d [yourdatabase] -f legacy.sql"
 
 #. Tag: para
 #: installation.xml:859
@@ -3010,10 +2933,9 @@ msgid ""
 "distance / length etc, you'll need the full blown <filename>legacy.sql</"
 "filename>"
 msgstr ""
-"テーブルを回復し、MapServerやGeoServerのようなアプリケーションで動作させるの"
-"に必要な最低限をインストールするには<filename>legacy_minimal.sql</filename>と"
-"いう選択肢があります。distance/length等のようなものを使うビューがあるなら、完"
-"全な<filename>legacy.sql</filename>が必要になります。"
+"还有一种备选方案就是将<filename>legacy_minimal.sql</filename>安装在裸机上面用"
+"于恢复表，和应用一起使用，就像使用MapServer 和 GeoServer一样。如果你有使用距"
+"离或长度计算的视图，你需要完整的<filename>legacy.sql</filename>"
 
 #. Tag: para
 #: installation.xml:862 installation.xml:897
@@ -3022,14 +2944,14 @@ msgid ""
 "You can later run <filename>uninstall_legacy.sql</filename> to get rid of "
 "the deprecated functions after you are done with restoring and cleanup."
 msgstr ""
-"リストアとクリーンアップを行った後で非推奨関数を消すために"
-"<filename>uninstall_legacy.sql</filename>を実行できます。"
+"你可以在你恢复和清理垃圾后，再执行<filename>uninstall_legacy.sql</filename>来"
+"规避一些不推荐的函数。"
 
 #. Tag: title
 #: installation.xml:866
 #, no-c-format
 msgid "Creating a spatial database using EXTENSIONS"
-msgstr "エクステンションを使った空間データベースの生成"
+msgstr "使用EXTENSIONS插件方式创建空间数据库"
 
 #. Tag: para
 #: installation.xml:868
@@ -3038,8 +2960,8 @@ msgid ""
 "If you are using PostgreSQL 9.1+ and have compiled and installed the "
 "extensions/ postgis modules, you can create a spatial database the new way."
 msgstr ""
-"PostgreSQL 9.1以上を使っていて、extensions/postgisモジュールをコンパイルとイ"
-"ンストールを行っている場合は、新しい方法で空間データベースを生成できます。"
+"如果你使用PostgreSQL 9.1+ 数据库，并且编译并安装了postgis扩展，你可以以新的方"
+"式来创建空间数据库。"
 
 #. Tag: para
 #: installation.xml:877
@@ -3049,37 +2971,34 @@ msgid ""
 "spatial_ref_sys and all the functions and comments with a simple: "
 "<programlisting>CREATE EXTENSION postgis;</programlisting> command."
 msgstr ""
-"PostGISエクステンションの中核によって、ジオメトリ、ジオグラフィ、ラスタ、"
-"spatial_ref_sysおよび全ての関数とコメントがインストールされます。次のコマンド"
-"を実行するだけです。<programlisting>CREATE EXTENSION postgis;</"
-"programlisting>"
+"核心的PostGIS扩展插件安装PostGIS geometry, geography, raster, "
+"spatial_ref_sys 功能及表和所有的函数以及函数的注释，只需要简单执行："
+"<programlisting>CREATE EXTENSION postgis;</programlisting>。"
 
 #. Tag: command
 #: installation.xml:883
 #, no-c-format
 msgid "psql -d [yourdatabase] -c \"CREATE EXTENSION postgis;\""
-msgstr "psql -d [データベース名] -c \"CREATE EXTENSION postgis;\""
+msgstr "psql -d [yourdatabase] -c \"CREATE EXTENSION postgis;\""
 
 #. Tag: para
 #: installation.xml:886
 #, no-c-format
 msgid ""
 "Topology is packaged as a separate extension and installable with command:"
-msgstr ""
-"トポロジは別のエクステンションとして用意されています。次のコマンドでインス"
-"トールします。"
+msgstr "拓扑功能是一个单独的扩展，需要执行如下命令安装："
 
 #. Tag: command
 #: installation.xml:891
 #, no-c-format
 msgid "psql -d [yourdatabase] -c \"CREATE EXTENSION postgis_topology;\""
-msgstr "psql -d [データベース名] -c \"CREATE EXTENSION postgis_topology;\""
+msgstr "psql -d [yourdatabase] -c \"CREATE EXTENSION postgis_topology;\""
 
 #. Tag: title
 #: installation.xml:900
 #, no-c-format
 msgid "Installing and Using the address standardizer"
-msgstr "PAGC住所標準化ツールのインストールと使用"
+msgstr "安装和使用address standardizer"
 
 #. Tag: para
 #: installation.xml:901
@@ -3091,10 +3010,10 @@ msgid ""
 "does, and how to configure it for your needs, refer to <xref linkend="
 "\"Address_Standardizer\"/>."
 msgstr ""
-"<code>address_standardizer</code>エクステンションは、別途ダウンロードする必要"
-"がある別パッケージとしていました。PostGIS 2.2からは同梱されています。"
-"address_standardizeの追加情報、できること、および、コンフィギュレーション方法"
-"については、<xref linkend=\"Address_Standardizer\"/>をご覧下さい。"
+"<code>address_standardizer</code>扩展曾经是一个单独的包，需要单独下载。从 "
+"PostGIS 2.2开始是捆绑在一起的了。关于address_standardize的更多信息，它是做什"
+"么的，还有如果根据需要配置它，请参考<xref linkend=\"Address_Standardizer\"/"
+">。"
 
 #. Tag: para
 #: installation.xml:903
@@ -3107,11 +3026,10 @@ msgid ""
 "block for your own geocoder or use it to standardize your addresses for "
 "easier compare of addresses."
 msgstr ""
-"標準化エクステンションは、<xref linkend=\"Normalize_Address\"/>の後継で、"
-"PostGISに入っているTigerジオコーダエクステンションに使うことができます。この"
-"場合の使い方については<xref linkend=\"tiger_pagc_address_standardizing\"/>を"
-"参照して下さい。また、ユーザ自身がつくるジオコーダの要素として使用したり、住"
-"所の比較を簡単にするために住所を標準化するために使うことができます。"
+"该standardizer可以与PostGIS打包的tiger geocoder扩展结合使用，作为讨论的<xref "
+"linkend=\"Normalize_Address\"/>的替代。 要用作替换，请参考<xref linkend="
+"\"tiger_pagc_address_standardizing\"/>。 您也可以将其用作自己的 geocoder的构"
+"建块，或者使用它来标准化地址，以便更容易地比较地址。"
 
 #. Tag: para
 #: installation.xml:907
@@ -3126,14 +3044,12 @@ msgid ""
 "pcredir=/path/to/pcre</code> where <filename>/path/to/pcre</filename> is the "
 "root folder for your pcre include and lib directories."
 msgstr ""
-"住所標準化エクステンションはPCREに依存しています。PCREは多くのUNIX系システム"
-"にインストールされていますが、<ulink url=\"http://www.pcre.org\">http://www."
-"pcre.org</ulink>から最新版をダウンロードできます。<xref linkend="
-"\"installation_configuration\"/>の際にPCREを発見すると、住所標準化エクステン"
-"ションが自動的にビルドされます。使用したいPCREのインストールが独自なものであ"
-"る場合は、configureに<code>--with-pcredir=/path/to/pcre</code>を渡します。"
-"<filename>/path/to/pcre</filename>は、PCREのincludeとlibのあるルートフォルダ"
-"です。"
+"address standardizer依赖于通常已经安装在许多Nix系统上的PCRE，但是您可以下载最"
+"新的：<ulink url=\"http://www.pcre.org\">http://www.pcre.org</ulink>。如果在"
+"<xref linkend=\"installation_configuration\"/>期间发现PCRE，则会自动构建"
+"address standardizer扩展。如果你想使用一个自定义的pcre安装，请传递配置"
+"<code>--with-pcredir=/path/to/pcre</code>，其中<filename>/path/to/pcre</"
+"filename>是包含pcre和lib目录的根文件夹。"
 
 #. Tag: para
 #: installation.xml:910
@@ -3143,16 +3059,15 @@ msgid ""
 "address_standardizer already so no need to compile and can move straight to "
 "<code>CREATE EXTENSION</code> step."
 msgstr ""
-"Windowsでは、PostGIS 2.1以上に住所標準化エクステンションが同梱されているの"
-"で、コンパイルを行わずに、すぐに<code>CREATE EXTENSION</code>に行くことができ"
-"ます。"
+"对于Windows用户，PostGIS 2.1+软件包已经与address_standardizer一起打包，无需编"
+"译，可以直接转到<code>CREATE EXTENSION</code>步骤。"
 
 #. Tag: para
 #: installation.xml:913
 #, no-c-format
 msgid ""
 "Once you have installed, you can connect to your database and run the SQL:"
-msgstr "インストールしたら、対象データベースに接続して次のSQLが実行できます。"
+msgstr "一旦安装成功，可以连接到数据库然后运行："
 
 #. Tag: programlisting
 #: installation.xml:914
@@ -3164,23 +3079,23 @@ msgstr "CREATE EXTENSION address_standardizer;"
 #: installation.xml:916
 #, no-c-format
 msgid "The following test requires no rules, gaz, or lex tables"
-msgstr "次のテストでは、rules, gaz, lexテーブルは必要ありません。"
+msgstr "以下测试不需要规则，gaz或lex表"
 
 #. Tag: programlisting
 #: installation.xml:917
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "SELECT num, street, city, state, zip\n"
 " FROM parse_address('1 Devonshire Place, Boston, MA 02109');"
 msgstr ""
-"SELECT num, street, city, state, zip \n"
+"SELECT num, street, city, state, zip\n"
 " FROM parse_address('1 Devonshire Place, Boston, MA 02109');"
 
 #. Tag: para
 #: installation.xml:918
 #, no-c-format
 msgid "Output should be"
-msgstr "出力は次のようになります。"
+msgstr "输出是"
 
 #. Tag: screen
 #: installation.xml:919
@@ -3198,7 +3113,7 @@ msgstr ""
 #: installation.xml:921
 #, no-c-format
 msgid "Installing Regex::Assemble"
-msgstr "Regex::Assembleのインストール"
+msgstr "安装Regex::Assemble"
 
 #. Tag: para
 #: installation.xml:922
@@ -3211,11 +3126,10 @@ msgid ""
 "rebuild <filename>parseaddress-stcities.h</filename> which does require "
 "Regex:Assemble."
 msgstr ""
-"PerlのRegex::Assembleは、ソースツリーの一部がこれで作られていますが、住所標準"
-"化エクステンションではもはや不要です。ただし、<filename>usps-st-city-orig."
-"txt</filename>または<filename>usps-st-city-orig.txt usps-st-city-adds.tx</"
-"filename>を編集する必要がある場合は、<filename>parseaddress-stcities.h</"
-"filename>のリビルドでRegex:Assembleが必要です。"
+"Perl  Regex:Assemble不再需要编译address_standardizer扩展，因为它生成的文件是"
+"源代码树的一部分。 但是，如果您需要编辑<filename>usps-st-city-orig.txt</"
+"filename>或<filename>usps-st-city-orig.txt usps-st-city-adds.tx</filename>，"
+"您需要重建需要Regex:Assemble.的<filename>parseaddress-stcities.h</filename>。"
 
 #. Tag: programlisting
 #: installation.xml:923
@@ -3227,8 +3141,7 @@ msgstr "cpan Regexp::Assemble"
 #: installation.xml:924
 #, no-c-format
 msgid "or if you are on Ubuntu / Debian you might need to do"
-msgstr ""
-"Ubuntu / Degianの場合には、次のようにしなければならないかも知れません。"
+msgstr "或者，如果您是Ubuntu / Debian系统，你需要"
 
 #. Tag: programlisting
 #: installation.xml:925
@@ -3240,7 +3153,7 @@ msgstr "sudo perl -MCPAN -e \"install Regexp::Assemble\""
 #: installation.xml:930
 #, no-c-format
 msgid "Installing, Upgrading Tiger Geocoder and loading data"
-msgstr "Tigerジオコーダのインストールとアップグレードとデータロード"
+msgstr "安装，升级Tiger Geocoder 地理信息编码器和装载数据"
 
 #. Tag: para
 #: installation.xml:932
@@ -3251,10 +3164,9 @@ msgid ""
 "file. The instructions provided here are also available in the "
 "<filename>extras/tiger_geocoder/README</filename>"
 msgstr ""
-"Tigerジオコーダのような追加機能は、PostGISディストリビューションに含まれてい"
-"ないことがありますが、postgis-&last_release_version;.tar.gzファイルには常に"
-"入っています。ここで提供する説明は<filename>extras/tiger_geocoder/tiger_2011/"
-"README</filename>にもあります。"
+"PostGIS额外的东西，比如Tiger 地理编码器可能没有打包在你的PostGIS发布版本中，"
+"但是在postgis-&last_release_version;.tar.gz文件中是包含的。这里的说明同样在目"
+"录<filename>extras/tiger_geocoder/README</filename>中有说明"
 
 #. Tag: para
 #: installation.xml:933
@@ -3264,15 +3176,15 @@ msgid ""
 "url=\"http://www.7-zip.org/\">http://www.7-zip.org/</ulink> to unzip the "
 "PostGIS tarball."
 msgstr ""
-"Windows上でtarの展開ができない場合は、<ulink url=\"http://www.7-zip.org/"
-"\">http://www.7-zip.org/</ulink>でPostGISのアーカイブファイルを展開できます。"
+"如果你是Windows系统，并且你没有安装tar命令程序（Linux打包和解压工具），你可以"
+"使用<ulink url=\"http://www.7-zip.org/\">http://www.7-zip.org/</ulink>提供的"
+"解压软件来解压你的tar包 。"
 
 #. Tag: title
 #: installation.xml:935
 #, no-c-format
 msgid "Tiger Geocoder Enabling your PostGIS database: Using Extension"
-msgstr ""
-"TigerジオコーダをPostGISデータベースで有効にする: エクステンションを使用"
+msgstr "使用扩展来让你的PostGIS数据库支持Tiger Geocoder插件"
 
 #. Tag: para
 #: installation.xml:936
@@ -3281,9 +3193,8 @@ msgid ""
 "If you are using PostgreSQL 9.1+ and PostGIS 2.1+, you can take advantage of "
 "the new extension model for installing tiger geocoder. To do so:"
 msgstr ""
-"PostgreSQL 9.1以上とPostGIS 2.1.0を使用している場合は、Tigerジオコーダのイン"
-"ストールで、新しいエクステンションモデルの利点を得ることができます。次のよう"
-"にします。"
+"如果你使用PostgreSQL 9.1+ 和 PostGIS 2.1.0,你可以充分利用新的创建扩展的方式来"
+"安装tiger geocoder插件："
 
 #. Tag: para
 #: installation.xml:938
@@ -3292,9 +3203,8 @@ msgid ""
 "First get binaries for PostGIS 2.1+ or compile and install as usual. This "
 "should install the necessary extension files as well for tiger geocoder."
 msgstr ""
-"まず、通常の方法で、PostGIS 2.1.0のバイナリを取得するか、コンパイルしてインス"
-"トールします。これにより重要なエクステンションファイルとTigerジオコーダのファ"
-"イルがインストールされます。"
+"首先获取二进制版本的PostGIS 2.1+ 或者已经编译好的软件包，然后正常安装。这会为"
+"tiger geocoder 安装必要的扩展文件。"
 
 #. Tag: para
 #: installation.xml:939
@@ -3306,14 +3216,13 @@ msgid ""
 "<varname>fuzzystrmatch</varname> extension already installed, you don't need "
 "to do the second step either."
 msgstr ""
-"psql、pgAdminまたは他のツールでデータベースに接続して、次のSQLコマンドを実行"
-"します。既にPostGISを持っているデータベースにインストールする場合は、一つ目の"
-"手順は不要です。<varname>fuzzystrmatch</varname>エクステンションが既にインス"
-"トールされている場合は、二つ目の手順は不要です。"
+"通过psql或pgAdmin或任何其他工具连接数据库，然后执行下面的SQL命令。注意：如果"
+"你的数据库已经安装了PostGIS了，那么第一步可以省略。如果你也安装了"
+"<varname>fuzzystrmatch</varname>扩展，那么第二步也不需要做。"
 
 #. Tag: programlisting
 #: installation.xml:940
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "CREATE EXTENSION postgis;\n"
 "CREATE EXTENSION fuzzystrmatch;\n"
@@ -3323,13 +3232,10 @@ msgid ""
 "CREATE EXTENSION postgis_tiger_geocoder;"
 msgstr ""
 "CREATE EXTENSION postgis;\n"
-"CREATE EXTENSION postgis_sfcgal;\n"
-"CREATE EXTENSION fuzzystrmatch; -- postgis_tiger_geocoderに必要\n"
-"-- postgis_tiger_geocoderで使用されるか単独で使われます\n"
+"CREATE EXTENSION fuzzystrmatch;\n"
+"--如果你想使用基于标准器(pagc_normalize_address)的规则，那么这个是可选的\n"
 "CREATE EXTENSION address_standardizer;\n"
-"CREATE EXTENSION address_standardizer_data_us;\n"
-"CREATE EXTENSION postgis_tiger_geocoder;\n"
-"CREATE EXTENSION postgis_topology;"
+"CREATE EXTENSION postgis_tiger_geocoder;"
 
 #. Tag: para
 #: installation.xml:942
@@ -3338,6 +3244,7 @@ msgid ""
 "If you already have postgis_tiger_geocoder extension installed, and just "
 "want to update to the latest run:"
 msgstr ""
+"如果你早就安装了postgis_tiger_geocoder扩展，仅仅是想升级到最新版本，运行："
 
 #. Tag: programlisting
 #: installation.xml:943
@@ -3346,6 +3253,8 @@ msgid ""
 "ALTER EXTENSION postgis UPDATE;\n"
 "ALTER EXTENSION postgis_tiger_geocoder UPDATE;"
 msgstr ""
+"ALTER EXTENSION postgis UPDATE;\n"
+"ALTER EXTENSION postgis_tiger_geocoder UPDATE;"
 
 #. Tag: para
 #: installation.xml:944
@@ -3355,15 +3264,15 @@ msgid ""
 "varname> and <varname>tiger.loader_variables</varname> you may need to "
 "update these."
 msgstr ""
+"如果你有自定义的选项或者修改了<varname>tiger.loader_platform</varname>和"
+"<varname>tiger.loader_variables</varname>，你可能需要升级。"
 
 #. Tag: para
 #: installation.xml:946
 #, no-c-format
 msgid ""
 "To confirm your install is working correctly, run this sql in your database:"
-msgstr ""
-"正しくインストールされたかを確認するために、インストール対象データベース内で"
-"次のSQLを実行します。"
+msgstr "要确认安装是否正常工作，运行下面的sql语句："
 
 #. Tag: programlisting
 #: installation.xml:947
@@ -3379,7 +3288,7 @@ msgstr ""
 #: installation.xml:948
 #, no-c-format
 msgid "Which should output"
-msgstr "出力は次のようになります。"
+msgstr "应该输出"
 
 #. Tag: screen
 #: installation.xml:949
@@ -3400,8 +3309,8 @@ msgid ""
 "Create a new record in <varname>tiger.loader_platform</varname> table with "
 "the paths of your executables and server."
 msgstr ""
-"<varname>tiger.loader_platform</varname>テーブルの、実行ファイルやサーバのパ"
-"スを持つ新しいレコードを生成します。"
+"根据你可执行文件和服务器的路径，在表<varname>tiger.loader_platform</varname>"
+"中新增一条记录。"
 
 #. Tag: para
 #: installation.xml:952
@@ -3409,13 +3318,11 @@ msgstr ""
 msgid ""
 "So for example to create a profile called debbie that follows <code>sh</"
 "code> convention. You would do:"
-msgstr ""
-"<code>sh</code>コンベンションのあとにdebbieというプロファイルを生成する例とし"
-"て、次のコマンドを実行します。"
+msgstr "例如创建一条名为debbie遵从<code>sh</code>方式的配置如下："
 
 #. Tag: programlisting
 #: installation.xml:953
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "INSERT INTO tiger.loader_platform(os, declare_sect, pgbin, wget, "
 "unzip_command, psql, path_sep,\n"
@@ -3426,9 +3333,9 @@ msgid ""
 "  WHERE os = 'sh';"
 msgstr ""
 "INSERT INTO tiger.loader_platform(os, declare_sect, pgbin, wget, "
-"unzip_command, psql, path_sep, \n"
+"unzip_command, psql, path_sep,\n"
 "                   loader, environ_set_command, county_process_command)\n"
-"SELECT 'debbie', declare_sect, pgbin, wget, unzip_command, psql, path_sep, \n"
+"SELECT 'debbie', declare_sect, pgbin, wget, unzip_command, psql, path_sep,\n"
 "           loader, environ_set_command, county_process_command\n"
 "  FROM tiger.loader_platform\n"
 "  WHERE os = 'sh';"
@@ -3440,8 +3347,8 @@ msgid ""
 "And then edit the paths in the <emphasis>declare_sect</emphasis> column to "
 "those that fit Debbie's pg, unzip,shp2pgsql, psql, etc path locations."
 msgstr ""
-"それから、<emphasis>declare_sect</emphasis>カラム内のパスを編集して、Debbieの"
-"pg, unzip, shp2pgsql, psql他のパス位置に適応するようにします。"
+"然后编辑<emphasis>declare_sect</emphasis>列的一些执行脚本路径参数，该参数应该"
+"和Debbie的pg, unzip,shp2pgsql, psql 等路径相匹配。"
 
 #. Tag: para
 #: installation.xml:956
@@ -3451,9 +3358,8 @@ msgid ""
 "just contain common case locations of items and you'll have to edit the "
 "generated script after the script is generated."
 msgstr ""
-"<varname>loader_platform</varname>テーブルを編集しない場合は、一般的なアイテ"
-"ムの位置を持っているので、スクリプトが生成された後で、スクリプトを編集しなけ"
-"ればなりません。"
+"如果你不编辑这个<varname>loader_platform</varname>表，那么该扩展只会包含默认"
+"的路径配置等参数，那样的话你需要在脚本生成后再编辑生成的脚本。"
 
 #. Tag: para
 #: installation.xml:958
@@ -3467,6 +3373,11 @@ msgid ""
 "<varname>staging_fold</varname> in the <varname>tiger.loader_variables</"
 "varname> table."
 msgstr ""
+"如果你到服务器的网络连接很快，在服务器根目录或者本地pc上创建一个名为"
+"<filename>gisdata</filename>的目录。该目录是tiger文件下载到和处理的地方。如果"
+"你不想在服务器的根目录下创建该文件夹，或者只是想简单的修改为一个不同的目录，"
+"编辑<varname>tiger.loader_variables</varname>表中的<varname>staging_fold</"
+"varname>字段。"
 
 #. Tag: para
 #: installation.xml:960
@@ -3476,6 +3387,9 @@ msgid ""
 "whereever you designated the <varname>staging_fold</varname> to be. This "
 "will be the folder where the loader extracts the downloaded tiger data."
 msgstr ""
+"在<filename>gisdata</filename>目录下或者你在<varname>staging_fold</varname>中"
+"指定的其他地方创建一个名为temp的目录。这将是加载程序提取下载的tiger数据的文件"
+"夹。"
 
 #. Tag: para
 #: installation.xml:962
@@ -3486,10 +3400,9 @@ msgid ""
 "of your custom profile and copy the scripts to a .sh or .bat file. So for "
 "example to do the nation load and one state using our new profile we would:"
 msgstr ""
-"そして、SQL関数<xref linkend=\"Loader_Generate_Nation_Script\"/>と<xref "
-"linkend=\"Loader_Generate_Script\"/>を実行して、独自のプロファイルの名前を使"
-"うか確認し、.shまたは.batファイルにスクリプトを複写します。たとえば、新しいプ"
-"ロファイルで国のロードと一つの州とについては、それぞれ次のようにします。"
+"然后运行<xref linkend=\"Loader_Generate_Nation_Script\"/>和<xref linkend="
+"\"Loader_Generate_Script\"/>SQL 函数来确保使用你配置的名称，并复制脚本到一个."
+"sh或.bat文件。例如，使用我们的新配置加载一个国家或者州，我们会："
 
 #. Tag: programlisting
 #: installation.xml:963
@@ -3507,7 +3420,7 @@ msgstr "SELECT Loader_Generate_Script(ARRAY['MA'], 'debbie');"
 #: installation.xml:967
 #, no-c-format
 msgid "Run the generated commandline scripts."
-msgstr ""
+msgstr "运行生成的命令行脚本。"
 
 #. Tag: para
 #: installation.xml:968
@@ -3516,9 +3429,8 @@ msgid ""
 "After you are done loading all data or at a stopping point, it's a good idea "
 "to analyze all the tiger tables to update the stats (include inherited stats)"
 msgstr ""
-"全てのデータのロードが完了するか中断ポイントに達した後に、全てのtigerテーブル"
-"に対してanalyzeを実行して、(継承されたものも含めて)状態を更新するのは良いこと"
-"です。"
+"加载所有数据或者在一个停止点，分析所有的tiger表并更新状态（包括继承的状态）是"
+"个不错的注意"
 
 #. Tag: programlisting
 #: installation.xml:969
@@ -3548,7 +3460,7 @@ msgstr ""
 #: installation.xml:972
 #, no-c-format
 msgid "Converting a Tiger Geocoder Regular Install to Extension Model"
-msgstr "Tigerジオコーダ通常インストールのエクステンションモデルへの変換"
+msgstr "转换Tiger Geocoder普通安装为扩展模块"
 
 #. Tag: para
 #: installation.xml:973
@@ -3557,8 +3469,7 @@ msgid ""
 "If you installed the tiger geocoder without using the extension model, you "
 "can convert to the extension model as follows:"
 msgstr ""
-"エクステンションモデルを使わずにTigerジオコーダをインストールしている場合に、"
-"次のようにして、エクステンションモデルに変換できます。"
+"如果你不是使用扩展模块方式安装的tiger geocoder，可以如下转换成扩展模块："
 
 #. Tag: para
 #: installation.xml:975
@@ -3567,15 +3478,14 @@ msgid ""
 "Follow instructions in <xref linkend=\"upgrade_tiger_geocoder\"/> for the "
 "non-extension model upgrade."
 msgstr ""
-"<xref linkend=\"upgrade_tiger_geocoder\" />の指示に従って非エクステンションモ"
-"デルのアップグレードを行います。"
+"跟随<xref linkend=\"upgrade_tiger_geocoder\"/>中的介绍获取非扩展模块的升级。"
 
 #. Tag: para
 #: installation.xml:976
 #, no-c-format
 msgid ""
 "Connect to your database with psql or pgAdmin and run the following command:"
-msgstr "psqlまたはpgAdminでデータベースに接続して、次のコマンドを実行します。"
+msgstr "使用psql或者pgAdmin连接数据库，并运行下列命令："
 
 #. Tag: programlisting
 #: installation.xml:977
@@ -3587,14 +3497,13 @@ msgstr "CREATE EXTENSION postgis_tiger_geocoder FROM unpackaged;"
 #: installation.xml:984
 #, no-c-format
 msgid "Tiger Geocoder Enabling your PostGIS database: Not Using Extensions"
-msgstr ""
-"TigerジオコーダをPostGISデータベースで有効にする: エクステンション不使用"
+msgstr "使用非扩展的方式在PostGIS数据库中启用Tiger Geocoder"
 
 #. Tag: para
 #: installation.xml:985
 #, no-c-format
 msgid "First install PostGIS using the prior instructions."
-msgstr "まず、上述の手順でPostGISをインストールします。"
+msgstr "首先使用之前的介绍安装PostGIS。"
 
 #. Tag: para
 #: installation.xml:989 installation.xml:1049
@@ -3603,8 +3512,8 @@ msgid ""
 "If you don't have an extras folder, download <ulink url="
 "\"&postgis_download_url;\">&postgis_download_url;</ulink>"
 msgstr ""
-"extrasフォルダが無い場合、<ulink url=\"&postgis_download_url;"
-"\">&postgis_download_url;</ulink>をダウンロードします。"
+"如果你没有extras文件夹，请下载<ulink url=\"&postgis_download_url;"
+"\">&postgis_download_url;</ulink>"
 
 #. Tag: command
 #: installation.xml:994 installation.xml:1054
@@ -3632,13 +3541,12 @@ msgid ""
 "\"Loader_Generate_Nation_Script\"/> and <xref linkend="
 "\"Loader_Generate_Script\"/> SQL functions."
 msgstr ""
-"<filename>tiger_loader_2015.sql</filename> (違う年のものをロードしたくないな"
-"らば最新のローダファイル)をあなたの実行サーバ等のパスに編集します。もしくは"
-"<varname>loader_platform</varname>がインストールされた後に一度これを更新しま"
-"す。このファイルも<varname>loader_platform</varname>も編集しない場合には、一"
-"般的なアイテムの位置を持っているだけなので、<xref linkend="
-"\"Loader_Generate_Nation_Script\"/>と<xref linkend=\"Loader_Generate_Script"
-"\"/>を実行した後に、生成されたスクリプトを編集しなければなりません。"
+"编辑<filename>tiger_loader_2015.sql</filename>，把path（或者你找到的最近的加"
+"载文件，除非你想加载一个不同的年份）设置成你在服务器上执行的路径或者可以在安"
+"装后更新<varname>loader_platform</varname>表。如果没有编辑此文件或"
+"<varname>loader_platform</varname>表，那么该扩展只会包含默认的路径配置等参"
+"数，你将必须在运行<xref linkend=\"Loader_Generate_Nation_Script\"/>和<xref "
+"linkend=\"Loader_Generate_Script\"/> SQL函数之后编辑生成的脚本文件。"
 
 #. Tag: para
 #: installation.xml:1003
@@ -3650,10 +3558,10 @@ msgid ""
 "your PostgreSQL specific settings and run the corresponding script from the "
 "commandline."
 msgstr ""
-"初めてTigerジオコーダをインストールする場合は、Windowsでは"
-"<filename>create_geocode.bat</filename>を、またLinux/Unix/Mac OSXでは"
-"<filename>create_geocode.sh</filename>を、使用するPostgreSQLにとって独自の設"
-"定に変更したうえで、コマンドラインから対応するスクリプトを実行します。"
+"如果你正在安装Tiger geocode，根据你的PostgreSQL设置，如果是在Windows上，那么"
+"首先编辑<filename>create_geocode.bat</filename> 脚本，如果是在Linux/Unix/Mac "
+"OSX上，首先编辑<filename>create_geocode.sh</filename>脚本，然后在命令行中运行"
+"相应的脚本。"
 
 #. Tag: para
 #: installation.xml:1007
@@ -3663,8 +3571,8 @@ msgid ""
 "and that it is part of your database search_path. If it is not, add it with "
 "a command something along the line of:"
 msgstr ""
-"データベースに<varname>tiger</varname>スキーマがあることを確認します。もし無"
-"い場合は、次の行を参考に、コマンドを実行します。"
+"确认一下现在你的数据库中是否已经有了<varname>tiger</varname>模式，并且也在你"
+"的search_path参数里面。如果没有，使用下面你的命令将其添加："
 
 #. Tag: programlisting
 #: installation.xml:1007
@@ -3679,8 +3587,8 @@ msgid ""
 "The normalizing address functionality works more or less without any data "
 "except for tricky addresses. Run this test and verify things look like this:"
 msgstr ""
-"住所正規化機能は、トリッキーな住所を除いて、大体データなしで動作します。テス"
-"トを実行して次のように見えることを確認して下さい。"
+"标准化地址函数除了复杂的、奇怪的地址之外，无论数据多少都一样工作。执行下面的"
+"测试来验证是否正常工作："
 
 #. Tag: programlisting
 #: installation.xml:1009
@@ -3702,8 +3610,7 @@ msgstr ""
 #: installation.xml:1012
 #, no-c-format
 msgid "Using Address Standardizer Extension with Tiger geocoder"
-msgstr ""
-"TigerジオコーダをPostGISデータベースで有効にする: エクステンションを使用"
+msgstr "使用地址标准扩展与Tiger geocoder"
 
 #. Tag: para
 #: installation.xml:1013
@@ -3718,13 +3625,12 @@ msgid ""
 "described in <xref linkend=\"installing_pagc_address_standardizer\"/> and "
 "install as an extension in your database."
 msgstr ""
-"皆さんが問題と思われるの多くのことのひとつに、ジオコーディング前の準備に住所"
-"を正規化する関数<xref linkend=\"Normalize_Address\"/>があります。住所正規化は"
-"万全と言うにはほど遠く、パッチをあてようとすると膨大な資源を費やします。よっ"
-"て、より良い住所標準化エンジンを持つ他のプロジェクトに統合しました。この新し"
-"い住所標準化を使うには、<xref linkend=\"installing_pagc_address_standardizer"
-"\"/>で記述するようにエクステンションをコンパイルし、使用するデータベースにイ"
-"ンストールします。"
+"广大用户经常抱怨的一个问题是地址正则化函数<xref linkend=\"Normalize_Address"
+"\"/>，在地理编码之前对准备地址进行规范化的函数。 该正则化函数远没有想象的完"
+"美，目前我们也花了大量资源来让它变得完美。 本身的话，我们也正在和另一个项目做"
+"集成，该项目有一个更好的地址标准化引擎。 要使用这个新的address_standardizer，"
+"请按照<xref linkend=\"installing_pagc_address_standardizer\"/>中所述编译扩展"
+"名，并将其作为扩展安装到数据库中。"
 
 #. Tag: para
 #: installation.xml:1016
@@ -3741,21 +3647,19 @@ msgid ""
 "pagc_lex</code>). These you can add and update to improve your standardizing "
 "experience for your own needs."
 msgstr ""
-"このエクステンションを<code>postgis_tiger_geocoder</code>をインストールしてい"
-"るデータベースにインストールすると、<xref linkend=\"Pagc_Normalize_Address\"/"
-">を、<xref linkend=\"Normalize_Address\"/>の代わりに使うことができます。この"
-"エクステンションはTigerジオコーダからは見えないので、国際的な住所といった他の"
-"データソースでも使えます。Tigerジオコーダエクステンションは、その版の<xref "
-"linkend=\"rulestab\"/> (<code>tiger.pagc_rules</code>), <xref linkend="
-"\"gaztab\"/> (<code>tiger.pagc_gaz</code>), <xref linkend=\"lextab\"/> "
-"(<code>tiger.pagc_lex</code>)を同梱しています。これらは、必要に応じて標準化の"
-"改善のために追加や更新ができます。"
+"一旦你在已经安装了<code>postgis_tiger_geocoder</code>的数据库中安装该扩展，那"
+"么可以使用<xref linkend=\"Pagc_Normalize_Address\"/>替代<xref linkend="
+"\"Normalize_Address\"/>。这种扩展是tiger不可知的，所以可以和其他数据源一起使"
+"用，如国际地址。tiger geocoder扩展与它自定义的<xref linkend=\"rulestab\"/> "
+"( <code>tiger.pagc_rules</code>) , <xref linkend=\"gaztab\"/> (<code>tiger."
+"pagc_gaz</code>), 和 <xref linkend=\"lextab\"/> (<code>tiger.pagc_lex</code>)"
+"一起打包。这些你可以添加和更新，以根据自己的需要改进标准化体验。"
 
 #. Tag: title
 #: installation.xml:1019
 #, no-c-format
 msgid "Loading Tiger Data"
-msgstr "Tigerデータのロード"
+msgstr "加载 Tiger 数据"
 
 #. Tag: para
 #: installation.xml:1020
@@ -3765,8 +3669,8 @@ msgid ""
 "the <filename>extras/tiger_geocoder/tiger_2011/README</filename>. This just "
 "includes the general steps."
 msgstr ""
-"データロードの説明の詳細は<filename>extras/tiger_geocoder/tiger_2011/README</"
-"filename>にあります。これは一般的な手順を示しています。"
+"关于使用该扩展加载数据可以参考<filename>extras/tiger_geocoder/tiger_2011/"
+"README</filename>获取更详细的步骤，这里只是一般步骤。"
 
 #. Tag: para
 #: installation.xml:1021
@@ -3781,26 +3685,24 @@ msgid ""
 "\"Drop_State_Tables_Generate_Script\"/> if you need to reload a state or "
 "just don't need a state anymore."
 msgstr ""
-"ロードプロセスによって、米センサスウェブサイトから個々の国ファイル、リクエス"
-"トされた州のデータをダウンロードし、ファイルを展開し、個別の州をそれぞれの州"
-"テーブルの集合にロードします。各州のテーブルは、<varname>tiger</varname>ス"
-"キーマで定義されたテーブルを継承しているので、これらのテーブルに対して全ての"
-"データにアクセスするためのクエリを出すことができますし、州の再読み込みが必要"
-"となったり、州が必要ない場合には、<xref linkend="
-"\"Drop_State_Tables_Generate_Script\"/>で、いつでも州テーブルの集合を削除する"
-"クエリを出すことができます。"
+"load数据的过程是：从census 网站上面下载各自的国家数据文件，州数据文件，然后从"
+"这些数据文件中抽取数据，再把每个州的数据load到各自的州表中。每一个州信息表继"
+"承了<varname>tiger</varname> schema定义的表，这样的话查询表数据的时候就可以从"
+"这些子表中查询所有数据，或者可以在任何时候比如当你需要重新load 一个州的信息数"
+"据或者不再需要这些表的时候，都可以使用<xref linkend="
+"\"Drop_State_Tables_Generate_Script\"/>来drop掉这些州信息（state）子表。"
 
 #. Tag: para
 #: installation.xml:1023
 #, no-c-format
 msgid "In order to be able to load data you'll need the following tools:"
-msgstr "データのロードを可能にするためには次のツールが必要です。"
+msgstr "为了能够load数据，你需要下面的工具："
 
 #. Tag: para
 #: installation.xml:1025
 #, no-c-format
 msgid "A tool to unzip the zip files from census website."
-msgstr "センサスウェブサイトから取得するZIPファイルを展開するツール。"
+msgstr "一个能解压从census 网站下载的zip文件的解压工具。"
 
 #. Tag: para
 #: installation.xml:1026
@@ -3809,8 +3711,8 @@ msgid ""
 "For Unix like systems: <varname>unzip</varname> executable which is usually "
 "already installed on most Unix like platforms."
 msgstr ""
-"Unix系システムでは、<varname>unzip</varname>実行ファイルです。通常は、ほとん"
-"どのUnix系プラットフォームで既にインストールされています。"
+"对于类Unix系统：大部分类Unix平台都安装了<varname>unzip</varname>可执行命令，"
+"可以用于解压。"
 
 #. Tag: para
 #: installation.xml:1027
@@ -3819,8 +3721,8 @@ msgid ""
 "For Windows, 7-zip which is a free compress/uncompress tool you can download "
 "from <ulink url=\"http://www.7-zip.org/\">http://www.7-zip.org/</ulink>"
 msgstr ""
-"Windowsでは7-zipです。<ulink url=\"http://www.7-zip.org/\">http://www.7-zip."
-"org/</ulink>からダウンロードできる無償の圧縮解答ツールです。"
+"对于Windows平台：7-zip软件是一个免费的压缩和解压工具，你可以从<ulink url="
+"\"http://www.7-zip.org/\">http://www.7-zip.org/</ulink>下载"
 
 #. Tag: para
 #: installation.xml:1029
@@ -3829,8 +3731,7 @@ msgid ""
 "<filename>shp2pgsql</filename> commandline which is installed by default "
 "when you install PostGIS."
 msgstr ""
-"<filename>shp2pgsql</filename>コマンド。PostGISインストール時にデフォルトでイ"
-"ンストールされます。"
+"<filename>shp2pgsql</filename> 命令行工具，默认在你安装PostGIS时候就安装了。"
 
 #. Tag: para
 #: installation.xml:1030
@@ -3839,8 +3740,8 @@ msgid ""
 "<filename>wget</filename> which is a web grabber tool usually installed on "
 "most Unix/Linux systems."
 msgstr ""
-"<filename>wget</filename>コマンド。通常はほとんどのUnix/Linuxシステムにインス"
-"トールされている、ウェブ取得ツールです。"
+"<filename>wget</filename>：一个web抓取工具，在大多数Unix/Linux系统上面都安装"
+"了。"
 
 #. Tag: para
 #: installation.xml:1031
@@ -3850,9 +3751,9 @@ msgid ""
 "\"http://gnuwin32.sourceforge.net/packages/wget.htm\">http://gnuwin32."
 "sourceforge.net/packages/wget.htm</ulink>"
 msgstr ""
-"Windows用については、コンパイル済みのバイナリを<ulink url=\"http://gnuwin32."
-"sourceforge.net/packages/wget.htm\">http://gnuwin32.sourceforge.net/packages/"
-"wget.htm</ulink>から取得できます。"
+"如果你在Windows系统上，你可以下载预编译的二进制程序软件<ulink url=\"http://"
+"gnuwin32.sourceforge.net/packages/wget.htm\">http://gnuwin32.sourceforge.net/"
+"packages/wget.htm</ulink>"
 
 #. Tag: para
 #: installation.xml:1034
@@ -3865,12 +3766,12 @@ msgid ""
 "script for you. <xref linkend=\"Loader_Generate_Nation_Script\"/> is a one-"
 "time step that should be done for upgrading (from 2010) and for new installs."
 msgstr ""
-"tiger_2010からアップグレードする場合には、最初に<xref linkend="
-"\"Drop_Nation_Tables_Generate_Script\"/>を生成、実行する必要があります。州"
-"データをロードする前に、<xref linkend=\"Loader_Generate_Nation_Script\"/>で国"
-"データをロードする必要があります。これによって、環境に合ったローダスクリプト"
-"が生成されます。<xref linkend=\"Loader_Generate_Nation_Script\"/>は、一度の操"
-"作で、(2010からの)アップグレードと、新しいインストールが行われます。"
+"如果你从tiger_2010版本升级，你首先需要生成并运行<xref linkend="
+"\"Drop_Nation_Tables_Generate_Script\"/>函数生成的SQL脚本。在你load任何州信息"
+"数据到数据库之前，你需要先load国家信息数据，该数据可以通过函数<xref linkend="
+"\"Loader_Generate_Nation_Script\"/>生成，该函数会为你生成一个load脚本。函数"
+"<xref linkend=\"Loader_Generate_Nation_Script\"/> 从2010版本起，生成的脚本，"
+"需要在升级或首次安装时候一步执行到位。"
 
 #. Tag: para
 #: installation.xml:1036
@@ -3881,11 +3782,9 @@ msgid ""
 "Note that you can install these piecemeal. You don't have to load all the "
 "states you want all at once. You can load them as you need them."
 msgstr ""
-"州データをロードするには、<xref linkend=\"Loader_Generate_Script\"/>を参照し"
-"て、手持ちのプラットフォームで動作する、求める州データをロードするデータロー"
-"ドスクリプトを生成します。州データはひとつずつダウンロードできることに注意し"
-"て下さい。一度に必要な州の全てについてデータをロードする必要はありません。必"
-"要なだけダウンロードできます。"
+"要load 州信息数据，参考<xref linkend=\"Loader_Generate_Script\"/>函数，生成一"
+"个数据加载脚本到任何你需要的平台上。注意：你可以一步一步来load 州数据，你不必"
+"一次性将所有州信息数据都安装。你可以根据需要来load数据。"
 
 #. Tag: para
 #: installation.xml:1039
@@ -3895,9 +3794,9 @@ msgid ""
 "<programlisting>SELECT install_missing_indexes();</programlisting> as "
 "described in <xref linkend=\"Install_Missing_Indexes\"/>."
 msgstr ""
-"求める州データをロードした後は、<xref linkend=\"Install_Missing_Indexes\"/>に"
-"示すように、<programlisting>SELECT install_missing_indexes();</"
-"programlisting>を実行するようにして下さい。"
+"当你所需要的州信息数据完全load进去后，记住要运行：<xref linkend="
+"\"Install_Missing_Indexes\"/>中描述的<programlisting>SELECT "
+"install_missing_indexes();</programlisting>。"
 
 #. Tag: para
 #: installation.xml:1041
@@ -3906,14 +3805,13 @@ msgid ""
 "To test that things are working as they should, try to run a geocode on an "
 "address in your state using <xref linkend=\"Geocode\"/>"
 msgstr ""
-"行うべきことができたかをテストするために、<xref linkend=\"Geocode\"/>を使用す"
-"る州の中の住所についてジオコーダを実行してみます。"
+"测试地址是否正常编码，请使用函数<xref linkend=\"Geocode\"/>来做一个地址编码"
 
 #. Tag: title
 #: installation.xml:1044
 #, no-c-format
 msgid "Upgrading your Tiger Geocoder Install"
-msgstr "Tigerジオコーダのアップグレード"
+msgstr "升级你安装的Tiger Geocoder"
 
 #. Tag: para
 #: installation.xml:1045
@@ -3924,10 +3822,9 @@ msgid ""
 "fixes you badly need. This will only work for Tiger geocoder not installed "
 "with extensions."
 msgstr ""
-"2.0以上に含まれるTigerジオコーダがインストールされている場合には、どうしても"
-"必要な訂正があるときは、いつでも臨時のアーカイブファイルからでも機能のアップ"
-"グレードができます。 これは、エクステンションでインストールされていないTiger"
-"ジオコーダで動作します。"
+"如果你已经在你的PostGIS 2.0+版本中安装了Tiger Geocoder 扩展，你可以在任何时候"
+"升级该扩展的函数，即便是一个临时性的PostGIS tar包版本（该版本可能有一些你需要"
+"的必须修复的补丁）。下面的只适用于没有安装扩展的Tiger geocoder 。"
 
 #. Tag: command
 #: installation.xml:1058
@@ -3943,9 +3840,9 @@ msgid ""
 "windows or the <filename>upgrade_geocoder.sh</filename> if you are on Linux/"
 "Unix/Mac OSX. Edit the file to have your postgis database credentials."
 msgstr ""
-"Windowsの場合は<filename>upgrade_geocoder.bat</filename>スクリプト、Linux/"
-"Unix/MacOS Xの場合は<filename>upgrade_geocoder.sh</filename>スクリプトの位置"
-"を特定します。 PostGISデータベースの資格情報を持つように編集します。"
+"如果是Windows平台，找到<filename>upgrade_geocoder.bat</filename>脚本，如果是"
+"Linux/Unix/Mac OSX平台，找到<filename>upgrade_geocoder.sh</filename>脚本。编"
+"辑这些文件让postgis在执行相关命令时候可以通过权限认证。"
 
 #. Tag: para
 #: installation.xml:1064
@@ -3954,14 +3851,15 @@ msgid ""
 "If you are upgrading from 2010 or 2011, make sure to unremark out the loader "
 "script line so you get the latest script for loading 2012 data."
 msgstr ""
-"2010または2011からアップグレードする場合には、確実にローダスクリプトのコメン"
-"トアウトを消すと、2012データのロードのための最新のスクリプトを得ます。"
+"如果你从2010 或 2011版本的Tiger Geocoder扩展升级，确保你取消了“${PSQL_CMD} -"
+"d \"${THEDB}\" -f \"upgrade_geocode.sql\"（译者注：这一行是upgrade_geocoder."
+"sh脚本里面的） 这一行注释，以便你能获取到最新的脚本来加载2012版本的数据。"
 
 #. Tag: para
 #: installation.xml:1065
 #, no-c-format
 msgid "Then run th corresponding script from the commandline."
-msgstr "対応するスクリプトをコマンドラインから実行します。"
+msgstr "然后在命令行上面运行相应的脚本。"
 
 #. Tag: para
 #: installation.xml:1069
@@ -3971,9 +3869,8 @@ msgid ""
 "with this SQL statement as detailed in <xref linkend="
 "\"Drop_Nation_Tables_Generate_Script\"/>"
 msgstr ""
-"次に、全ての国テーブルを削除し、新しい国テーブルをロードします。<xref "
-"linkend=\"Drop_Nation_Tables_Generate_Script\"/>に詳細がある通り、このSQLス"
-"テートメントを使った削除スクリプトを生成します。"
+"然后删除掉所有的国家相关表，然后加载新的数据，生成DROP脚本请参考<xref "
+"linkend=\"Drop_Nation_Tables_Generate_Script\"/>"
 
 #. Tag: programlisting
 #: installation.xml:1070
@@ -3985,7 +3882,7 @@ msgstr "SELECT drop_nation_tables_generate_script();"
 #: installation.xml:1071
 #, no-c-format
 msgid "Run the generated drop SQL statements."
-msgstr "生成した削除SQLステートメントを実行します。"
+msgstr "运行生成删除数据的SQL脚本。"
 
 #. Tag: para
 #: installation.xml:1072
@@ -3994,14 +3891,14 @@ msgid ""
 "Generate a nation load script with this SELECT statement as detailed in "
 "<xref linkend=\"Loader_Generate_Nation_Script\"/>"
 msgstr ""
-"<xref linkend=\"Loader_Generate_Nation_Script\"/>に詳細がある通り、このSELECT"
-"ステートメントを使った削除スクリプトを生成します。"
+"使用SELECT语句生成国家数据load脚本，参考函数 <xref linkend="
+"\"Loader_Generate_Nation_Script\"/>"
 
 #. Tag: emphasis
 #: installation.xml:1073
 #, no-c-format
 msgid "For windows"
-msgstr "Windows向け"
+msgstr "对于Windows版本"
 
 #. Tag: programlisting
 #: installation.xml:1074
@@ -4013,7 +3910,7 @@ msgstr "SELECT loader_generate_nation_script('windows');"
 #: installation.xml:1075
 #, no-c-format
 msgid "For unix/linux"
-msgstr "Unix/Linux向け"
+msgstr "对于unix/linux版本"
 
 #. Tag: programlisting
 #: installation.xml:1076
@@ -4028,9 +3925,8 @@ msgid ""
 "Refer to <xref linkend=\"tiger_geocoder_loading_data\"/> for instructions on "
 "how to run the generate script. This only needs to be done once."
 msgstr ""
-"生成したスクリプトの実行方法に関する説明は、<xref linkend="
-"\"tiger_geocoder_loading_data\"/>を参照して下さい。これは一度だけ実行する必要"
-"があります。"
+"参考<xref linkend=\"tiger_geocoder_loading_data\"/> 获取运行生成脚本的指导。"
+"上面的语句只需要执行一次。"
 
 #. Tag: para
 #: installation.xml:1078
@@ -4041,15 +3937,15 @@ msgid ""
 "2010 tables for that state using <xref linkend="
 "\"Drop_State_Tables_Generate_Script\"/>."
 msgstr ""
-"2010/2011州テーブルを混在させることができ、それぞれの州について個別にアップグ"
-"レードできます。2011にアップグレードする前に、まず、<xref linkend="
-"\"Drop_State_Tables_Generate_Script\"/>を使って、2010州テーブルを削除します。"
+"如果你数据库中包含的是2010和2011 混合州数据，你可以一个一个州表升级。在你升级"
+"一个州数据到2011版本之前，你先drop掉2010版本的表，drop脚本使用函数<xref "
+"linkend=\"Drop_State_Tables_Generate_Script\"/>生成。"
 
 #. Tag: title
 #: installation.xml:1084
 #, no-c-format
 msgid "Create a spatially-enabled database from a template"
-msgstr "空間データベースをテンプレートから生成する"
+msgstr "从一个template模板数据库中创建一个支持空间功能的数据库"
 
 #. Tag: para
 #: installation.xml:1086
@@ -4064,19 +3960,17 @@ msgid ""
 "the database user must have been granted the privilege to create new "
 "databases."
 msgstr ""
-"PostGISのディストリビューション (特にPostGIS &gt;= 1.1.5のWin32インストーラ)"
-"の中には、<varname>template_postgis</varname>というテンプレートにPostGIS関数"
-"をロードしていることがあります。PostgreSQLに<varname>template_postgis</"
-"varname>データベースが存在するなら、ユーザやアプリケーションは、空間データ"
-"ベースの生成をコマンドひとつで済ませられます。この2種類のやり方のどちらを使う"
-"ににしても、データベースユーザは、新しいデータベースを作成する権限を与えられ"
-"ている必要があります。"
+"有一些PostGIS版本（特别是Win32平台上的PostGIS &gt;= 1.1.5的安装工具安装的版"
+"本）会将PostGIS函数加载到一个叫做<varname>template_postgis</varname>的临时数"
+"据库中。如果你的PostgreSQL数据库中已经存在了这个数据库，那么对于用户或者应用"
+"来说，通过一个简单命令就可以创建一个有空间支持的数据库。注意：无论哪种情况，"
+"数据库用户都必须有创建新数据库的授权。"
 
 #. Tag: para
 #: installation.xml:1097
 #, no-c-format
 msgid "From the shell:"
-msgstr "シェルからの実行は次の通りです。"
+msgstr "shell命令执行方式:"
 
 #. Tag: programlisting
 #: installation.xml:1101
@@ -4088,7 +3982,7 @@ msgstr "# createdb -T template_postgis my_spatial_db"
 #: installation.xml:1103
 #, no-c-format
 msgid "From SQL:"
-msgstr "SQLからの実行は次の通りです。"
+msgstr "SQL语句执行方式:"
 
 #. Tag: programlisting
 #: installation.xml:1107
@@ -4100,7 +3994,7 @@ msgstr "postgres=# CREATE DATABASE my_spatial_db TEMPLATE=template_postgis"
 #: installation.xml:1111
 #, no-c-format
 msgid "Upgrading"
-msgstr "アップグレード"
+msgstr "升级"
 
 #. Tag: para
 #: installation.xml:1113
@@ -4108,9 +4002,7 @@ msgstr "アップグレード"
 msgid ""
 "Upgrading existing spatial databases can be tricky as it requires "
 "replacement or introduction of new PostGIS object definitions."
-msgstr ""
-"既存の空間データベースのアップグレードは、新しいPostGISオブジェクト定義の置き"
-"換えや導入を必要とするとき、慎重を要することがあります。"
+msgstr "升级已有的空间数据库可以认为是替换或引入新的PostGIS数据库对象定义。"
 
 #. Tag: para
 #: installation.xml:1118
@@ -4119,8 +4011,8 @@ msgid ""
 "Unfortunately not all definitions can be easily replaced in a live database, "
 "so sometimes your best bet is a dump/reload process."
 msgstr ""
-"不幸なことに、定義の全てが実行中のデータベース内で簡単には置き換えられるわけ"
-"ではないので、ダンプ/リロードが最善策となることがあります。"
+"不幸的是，不是所有的数据库对象定义可以在一个在线数据库上面轻易地替换掉，因此"
+"有时候最好的办法是使用dump/reload的方式。"
 
 #. Tag: para
 #: installation.xml:1123
@@ -4129,9 +4021,7 @@ msgid ""
 "PostGIS provides a SOFT UPGRADE procedure for minor or bugfix releases, and "
 "a HARD UPGRADE procedure for major releases."
 msgstr ""
-"PostGISには、マイナーバージョンアップやバグフィクスリリースの場合に使うソフト"
-"アップグレードと、メジャーアップグレードで使うハードアップグレードが用意され"
-"ています。"
+"PostGIS 提供了对于小版本或bug修复版本的软升级方式，和对于大版本的硬升级方式。"
 
 #. Tag: para
 #: installation.xml:1128
@@ -4141,15 +4031,14 @@ msgid ""
 "data. If you use the -Fc flag to pg_dump you will always be able to restore "
 "the dump with a HARD UPGRADE."
 msgstr ""
-"PostGISをアップグレードしようとする前にデータのバックアップを取ることは、常に"
-"価値のあるものです。pg_dumpで -Fc フラグを使うと、ハードアップグレードによっ"
-"てダンプを常にリストアすることができます。"
+"在升级PostGIS之前，一定要备份你的数据。如果你使用pg_dump命令带有-Fc参数的方式"
+"备份数据，硬升级后可以恢复备份的数据。"
 
 #. Tag: title
 #: installation.xml:1135
 #, no-c-format
 msgid "Soft upgrade"
-msgstr "ソフトアップグレード "
+msgstr "软升级"
 
 #. Tag: para
 #: installation.xml:1137
@@ -4160,15 +4049,14 @@ msgid ""
 "way, then you should upgrade using the sql script way. Please refer to the "
 "appropriate."
 msgstr ""
-"エクステンションを使ってインストールした場合は、エクステンションモデルでアッ"
-"プグレードしなければなりません。 古いSQLスクリプトを使ってインストールした場"
-"合は、SQLスクリプトでアップグレードすべきです。適切な方を参照して下さい。"
+"如果你通过扩展方式安装PostGIS，你同样可以通过扩展方式来升级。如果你通过老的"
+"sql脚本方式来安装，那么你应该通过sql脚本方式来升级。请参考相应章节。"
 
 #. Tag: title
 #: installation.xml:1140
 #, no-c-format
 msgid "Soft Upgrade Pre 9.1+ or without extensions"
-msgstr "9.1より前またはエクステンションを使わないソフトアップグレード"
+msgstr "9.1之前版本软升级或不使用扩展方式升级"
 
 #. Tag: para
 #: installation.xml:1141
@@ -4178,8 +4066,8 @@ msgid ""
 "extensions. If you have extensions and try to upgrade with this approach "
 "you'll get messages like:"
 msgstr ""
-"PostGISをエクステンションを使わずにインストールした人向けです。エクステンショ"
-"ンを使っていてこの方法を使うと、次のようなメッセージが現れます。"
+"这一节主要适用于那些没有使用扩展模式安装的情形。如果你的数据库有扩展，使用扩"
+"展升级时候得到信息："
 
 #. Tag: programlisting
 #: installation.xml:1142
@@ -4201,19 +4089,19 @@ msgid ""
 "from PostGIS 1.* to PostGIS 2.* or from PostGIS 2.* prior to r7409, you need "
 "to do a HARD UPGRADE."
 msgstr ""
-"コンパイルとインストールの後に<filename>postgis_upgrade.sql</filename>と"
-"<filename>rtpostgis_upgrade.sql</filename>を探して下さい。たとえば<filename>/"
-"usr/share/postgresql/9.3/contrib/postgis_upgrade.sql</filename>です。"
-"<filename>postgis_upgrade.sql</filename>をインストールして下さい。ラスタ機能"
-"をインストールしている場合には、<filename>/usr/share/postgresql/9.3/contrib/"
-"rtpostgis_upgrade.sql</filename>もインストールします。PostGIS 1.*から2.*に移"
-"動したり、2.*からr7409以前に落とす場合は、ハードアップグレードして下さい。"
+"编译安装后 (make install)，你应该在安装目录中找到<filename>postgis_upgrade."
+"sql</filename>和<filename>rtpostgis_upgrade.sql</filename>。例如<filename>/"
+"usr/share/postgresql/9.3/contrib/postgis_upgrade.sql</filename>。执行脚本"
+"<filename>postgis_upgrade.sql</filename>。如果你已经安装了栅格功能了，你同样"
+"需要执行脚本<filename>/usr/share/postgresql/9.3/contrib/postgis_upgrade.sql</"
+"filename>。如果你需要从PostGIS 1.* 版本升级到 PostGIS 2.* 版本，或者从"
+"PostGIS 2.* 之前的版本升级到r7409版本，你需要通过硬升级方式升级。"
 
 #. Tag: programlisting
 #: installation.xml:1147
 #, no-c-format
 msgid "psql -f postgis_upgrade.sql -d your_spatial_database"
-msgstr "psql -f postgis_upgrade.sql -d [データベース名]"
+msgstr "psql -f postgis_upgrade.sql -d your_spatial_database"
 
 #. Tag: para
 #: installation.xml:1149
@@ -4223,21 +4111,21 @@ msgid ""
 "files named <filename>rtpostgis_upgrade*.sql</filename> and "
 "<filename>topology_upgrade*.sql</filename> respectively. If you need them:"
 msgstr ""
-"ラスタ機能とトポロジ機能についても同じ手続きです。それぞれ"
-"<filename>rtpostgis_upgrade*.sql</filename>と<filename>topology_upgrade*."
-"sql</filename>とになります。次のようにします。"
+"同样对于栅格和拓扑扩展，也需要上面的执行步骤。升级文件分别是"
+"<filename>rtpostgis_upgrade*.sql</filename>和<filename>topology_upgrade*."
+"sql</filename>。如果你需要这些功能升级，执行："
 
 #. Tag: programlisting
 #: installation.xml:1157
 #, no-c-format
 msgid "psql -f rtpostgis_upgrade.sql -d your_spatial_database"
-msgstr "psql -f rtpostgis_upgrade.sql -d [データベース名]"
+msgstr "psql -f rtpostgis_upgrade.sql -d your_spatial_database"
 
 #. Tag: programlisting
 #: installation.xml:1158
 #, no-c-format
 msgid "psql -f topology_upgrade.sql -d your_spatial_database"
-msgstr "psql -f topology_upgrade.sql -d [データベース名]"
+msgstr "psql -f topology_upgrade.sql -d your_spatial_database"
 
 #. Tag: para
 #: installation.xml:1161
@@ -4247,9 +4135,8 @@ msgid ""
 "upgrading your version you are using a version too early for a soft upgrade "
 "and need to do a HARD UPGRADE."
 msgstr ""
-"アップグレードのための特定の版の<filename>postgis_upgrade*.sql</filename>が見"
-"つからない場合は、非常に古い版を使っています。ハードアップグレードが必要で"
-"す。"
+"如果你没有找到文件<filename>postgis_upgrade*.sql</filename>来升级到你的版本，"
+"你可能使用的版本太老了，以至于无法使用软升级方式，这样你必须要硬升级。"
 
 #. Tag: para
 #: installation.xml:1167
@@ -4259,15 +4146,14 @@ msgid ""
 "about the need to run this kind of upgrade using a \"procs need upgrade\" "
 "message."
 msgstr ""
-"<xref linkend=\"PostGIS_Full_Version\"/>関数の\"procs need upgrade\"という"
-"メッセージで、この種のアップグレードを実行する必要性についての情報が得られま"
-"す。"
+"函数<xref linkend=\"PostGIS_Full_Version\"/>会以\"procs need upgrade\"这样的"
+"信息，告诉你这种类型升级的条件。"
 
 #. Tag: title
 #: installation.xml:1174
 #, no-c-format
 msgid "Soft Upgrade 9.1+ using extensions"
-msgstr "9.1以上でエクステンションを使ったソフトアップグレード"
+msgstr "使用扩展方式软升级9.1+版本"
 
 #. Tag: para
 #: installation.xml:1175
@@ -4277,9 +4163,8 @@ msgid ""
 "upgrade using extensions as well. Doing a minor upgrade with extensions, is "
 "fairly painless."
 msgstr ""
-"エクステンションを使ってPostGISをインストールした場合には、エクステンションを"
-"使ってアップグレードする必要があります。エクステンションを使ったマイナーアッ"
-"プグレードはかなり楽です。"
+"如果你原本就以扩展方式安装了PostGIS，那么你同样也可以用扩展方式来升级。使用扩"
+"展来升级小版本是相当无痛苦的。"
 
 #. Tag: programlisting
 #: installation.xml:1176
@@ -4295,7 +4180,7 @@ msgstr ""
 #: installation.xml:1177
 #, no-c-format
 msgid "If you get an error notice something like:"
-msgstr "次のようなエラー通知が表示されることがあります。"
+msgstr "如果你得到一个错误信息如下："
 
 #. Tag: programlisting
 #: installation.xml:1178
@@ -4311,15 +4196,14 @@ msgid ""
 "<xref linkend=\"create_new_db_extensions\"/> and then restore your backup "
 "ontop of this new database."
 msgstr ""
-"この場合は、データベースをバックアップして、<xref linkend="
-"\"create_new_db_extensions\"/>に記述されているように新しいデータベースを生成"
-"し、バックアップを新しいデータベースにリストアしなければなりません。"
+"那么你需要备份数据库，如<xref linkend=\"create_new_db_extensions\"/>所述创建"
+"一个新的库，然后在这个新的数据库恢复数据。"
 
 #. Tag: para
 #: installation.xml:1180
 #, no-c-format
 msgid "If you get a notice message like:"
-msgstr "次のようなメッセージを得ることがあります。"
+msgstr "如果你得到这样的通知消息："
 
 #. Tag: programlisting
 #: installation.xml:1181
@@ -4341,10 +4225,10 @@ msgid ""
 "case you can append \"next\" to the version string, and next time you'll "
 "need to drop the \"next\" suffix again:"
 msgstr ""
-"この場合は、全てアップデートされていて、安全に無視できます。SVN版から次版(新"
-"しい版番号を得ていないもの)にアップグレード<emphasis role=\"bold\">しようとし"
-"ない限り</emphasis>、\"next\"を版文字列に追加できます。ただし、次回に\"next"
-"\"を削除する必要があります。"
+"那么到目前为止所有的都已经安装好了，你可以无视这个信息。<emphasis role=\"bold"
+"\">除非</emphasis>你想尝试从SVN版本升级到下一个版本（而这个版本没有新的版本"
+"号）；这种情况下，你可以在版本字符串上面加上“next“字符串，下次升级时候你还是"
+"需要把”next“后缀删掉："
 
 #. Tag: programlisting
 #: installation.xml:1188
@@ -4365,15 +4249,15 @@ msgid ""
 "the backup just has <code>CREATE EXTENSION postgis</code> and thus picks up "
 "the newest latest version during restore."
 msgstr ""
-"PostGISをバージョン指定なしにインストールした場合には、 しばしばリストアの前"
-"のPostGIS EXTENSIONの再インストールをとばすことができます。 バックアップは"
-"<code>CREATE EXTENSION postgis</code>だけで、リストアの間に最新版になります。"
+"如果你已经安装了一个没有具体版本的PostGIS，你可以在恢复数据前直接跳过PostGIS"
+"扩展方式的安装，因为备份只包含了<code>CREATE EXTENSION postgis</code>，这样的"
+"话直接选一个最新的PostGIS版本好了。"
 
 #. Tag: title
 #: installation.xml:1196
 #, no-c-format
 msgid "Hard upgrade"
-msgstr "ハードアップグレード"
+msgstr "硬升级"
 
 #. Tag: para
 #: installation.xml:1198
@@ -4385,11 +4269,10 @@ msgid ""
 "Notes</link> appendix reports for each version whether you need a dump/"
 "reload (HARD UPGRADE) to upgrade."
 msgstr ""
-"ハードアップグレードとは、PostGISで利用可能なデータの完全なダンプ/リロードを"
-"意味します。PostGISオブジェクトの内部格納状態が変更される場合や、ソフトアップ"
-"グレードができない場合に、ハードアップグレードが必要です。付録の<link "
-"linkend=\"release_notes\">リリースノート</link>に、版ごとについて、ダンプ/リ"
-"ロード (ハードアップグレード)の要否を記載しています。"
+"硬升级是指我们需要全部dump出数据，然后再把数据重新load到数据库中。当PostGIS对"
+"象的内部存储改变或者当软升级不可用的时候，你需要硬升级。在每个<link linkend="
+"\"release_notes\">版本发布记录（Release Notes）</link>的附录章节，你可以看到"
+"你是否需要硬升级的方式来进行升级。"
 
 #. Tag: para
 #: installation.xml:1207
@@ -4401,10 +4284,9 @@ msgid ""
 "database with PostGIS installed without getting duplicate symbol errors or "
 "bringing forward deprecated objects."
 msgstr ""
-"ダンプ/リロード作業はpostgis_restore.plスクリプトが補助します。このスクリプト"
-"は、PostGIS (古いものを含む)に属する定義を全て飛ばすように注意します。また、"
-"重複シンボルエラーや非推奨オブジェクトを持越すことなく、スキーマとデータを"
-"PostGISをインストールしたデータベースにリストアできます 。"
+"dump和reload 程序都需要PostGIS的Perl程序postgis_restore.pl脚本支持，该脚本会"
+"处理属于PostGIS的数据库对象定义（包括旧版本的），以及让你在恢复schema和数据到"
+"一个已经安装PostGIS的数据库时候，跳过数据重复的错误和不推荐的数据库对象。"
 
 #. Tag: para
 #: installation.xml:1216
@@ -4414,14 +4296,14 @@ msgid ""
 "\"http://trac.osgeo.org/postgis/wiki/UsersWikiWinUpgrade\">Windows Hard "
 "upgrade</ulink>."
 msgstr ""
-"Windows用に関する追加情報は<ulink url=\"http://trac.osgeo.org/postgis/wiki/"
-"UsersWikiWinUpgrade\">Windows Hard upgrade</ulink>にあります。"
+"关于Windows用户硬升级的补充说明，请参考<ulink url=\"http://trac.osgeo.org/"
+"postgis/wiki/UsersWikiWinUpgrade\">Windows Hard upgrade</ulink>。"
 
 #. Tag: para
 #: installation.xml:1219
 #, no-c-format
 msgid "The Procedure is as follows:"
-msgstr "手続きは次の通りです。 "
+msgstr "过程如下："
 
 #. Tag: para
 #: installation.xml:1227
@@ -4432,10 +4314,9 @@ msgid ""
 "output. The user can be the owner of the db, need not be postgres super "
 "account."
 msgstr ""
-"アップグレードしたデータベース (<varname>olddb</varname>と呼ぶことにしましょ"
-"う)の「カスタム書式」のダンプを、バイナリBLOBデータを含めたダンプを指定して "
-"(-b)、verboseモード (-v)で生成します。ユーザはデータベースのオーナーになるこ"
-"とができ、PostgreSQLのスーパーユーザである必要はありません。"
+"创建一个自定义的你要升级的数据库（暂时称之为<varname>olddb</varname>）dump命"
+"令，包含二进制blob（-b）对象和详细日志输出（-v）。用户只需要是这个数据库的所"
+"有者即可，不必是postgres超级管理员账户。"
 
 #. Tag: programlisting
 #: installation.xml:1235
@@ -4456,10 +4337,9 @@ msgid ""
 "\"create_new_db\"/> and <xref linkend=\"create_new_db_extensions\"/> for "
 "instructions on how to do this."
 msgstr ""
-"新しいデータベースにPostGISを、PostGISが無い状態からインストールします。この"
-"データベースを<varname>newdb</varname>と呼ぶことにします。この作業に関する説"
-"明については<xref linkend=\"create_new_db\"/>と<xref linkend="
-"\"create_new_db_extensions\"/>とを参照して下さい。"
+"在新的数据库中安装一个新的PostGIS库 -- 我们会把这个数据库称作<varname>newdb</"
+"varname>。请参考<xref linkend=\"create_new_db\"/>和<xref linkend="
+"\"create_new_db_extensions\"/>获取如何这样做的信息。"
 
 #. Tag: para
 #: installation.xml:1248
@@ -4471,10 +4351,10 @@ msgid ""
 "If for any reason you really want your own overrides of standard entries "
 "just don't load the spatial_ref_sys.sql file when creating the new db."
 msgstr ""
-"ダンプにあるspatial_ref_sysは、リストアされますが、既にあるspatial_ref_sysを"
-"上書きしません。リストア対象のデータベースに公式データセットの訂正が確実に伝"
-"わるようにするためです。標準のエントリを上書きしたい場合は、newdbを生成する際"
-"にspaltial_ref_sys.sqlファイルをロードしないだけです。"
+"在你dump文件中，数据表spatial_ref_sys会被恢复，但是他们不会覆盖已经存在的"
+"spatial_ref_sys表。这是为了确保官网的bug修复可以以正确的方式影响到被恢复的数"
+"据库中。如果因为任何原因，你真的想覆盖掉已经存在的表入口，只需要创建新数据库"
+"时候不执行脚本spatial_ref_sys.sql。"
 
 #. Tag: para
 #: installation.xml:1258
@@ -4488,11 +4368,11 @@ msgid ""
 "functions can be later removed by loading <filename>uninstall_legacy.sql</"
 "filename>."
 msgstr ""
-"データベースが本当に古く、ビューや関数に、長く非推奨になっている関数があるよ"
-"うな場合には、関数やビューを使えるようにするlegacy.sqlをロードする必要がある"
-"でしょう。ただし、本当に必要な場合に限ります。可能なら、ビューや関数をダンプ"
-"せずにアップグレードすることを検討して下さい。非推奨関数は、"
-"<filename>uninstall_legacy.sql</filename>で後から削除することができます。"
+"如果你的数据库真的很老或者你知道在你的视图或函数中使用了已经很久不推荐的函"
+"数，你可能需要执行脚本<filename>legacy.sql</filename> 来恢复这些老版本的函数"
+"和视图。除非真的必要，你才可以这样做。如果可能的话，在dump数据库数据前，请优"
+"先考虑升级你的视图和函数，不推荐的函数会稍后被脚本 "
+"<filename>uninstall_legacy.sql</filename>所删除。"
 
 #. Tag: para
 #: installation.xml:1274
@@ -4502,9 +4382,9 @@ msgid ""
 "postgis_restore.pl. Unexpected errors, if any, will be printed to the "
 "standard error stream by psql. Keep a log of those."
 msgstr ""
-"バックアップを新しい<varname>newdb</varname>データベースにリストアするには、"
-"postgis_restore.plを使います。psqlが予期せぬエラーを標準エラー出力に出すこと"
-"があります。これらのログを保存しておいて下さい。"
+"使用脚本postgis_restore.pl把你备份的数据恢复到新创建的数据库<varname>newdb</"
+"varname>中。如果有不可预料的错误，错误将会输出到psql的标准输出中，最好把错误"
+"重定向到一个错误文件中。"
 
 #. Tag: programlisting
 #: installation.xml:1282
@@ -4520,7 +4400,7 @@ msgstr ""
 #: installation.xml:1288
 #, no-c-format
 msgid "Errors may arise in the following cases:"
-msgstr "エラーは次の場合に起こりえます。"
+msgstr "下面的情况可能会引起一些错误："
 
 #. Tag: para
 #: installation.xml:1294
@@ -4534,13 +4414,12 @@ msgid ""
 "to fix your code to stop using deprecated functions and drop them loading "
 "<filename>uninstall_legacy.sql</filename>."
 msgstr ""
-"ビューまたは関数の中に非推奨のPostGISオブジェクトを使っているものがある場合。"
-"これの訂正には、リストア前に<filename>legacy.sql</filename>スクリプトのロード"
-"を試してみることができます。非推奨オブジェクトをまだ持っている版のPostGISにリ"
-"ストアして、コードを作り替えた後に再び移動させることもできます。 "
-"<filename>legacy.sql</filename>を利用する場合は、非推奨関数を使うのをやめた"
-"コードに訂正して、<filename>uninstall_legacy.sql</filename>をロードするのを忘"
-"れないでください。"
+"你的视图或者函数里面可能使用了一些已经不推荐的PostGIS 对象。为了解决这个问"
+"题，在恢复之前，你需要执行脚本<filename>legacy.sql</filename>，或者需要恢复到"
+"一个还包含这些对象的PostGIS版本，然后进行代码移植。如果脚本<filename>legacy."
+"sql</filename>能解决你的问题，别忘了修复你的代码，停止使用这些不推荐的函数，"
+"然后通过执行<filename>uninstall_legacy.sql</filename>脚本来抛掉这些不推荐的数"
+"据库对象。"
 
 #. Tag: para
 #: installation.xml:1306
@@ -4555,6 +4434,11 @@ msgid ""
 "invariant to hold and possibly also its primary key ( when multiple invalid "
 "SRIDS get converted to the same reserved SRID value )."
 msgstr ""
+"dump出的表spatial_ref_sys中含有一些用户自定义的记录，其SRID值是无效的。有效的"
+"SRID值应该是大于0，并且小于999000的。SRID值大于999000小于999999范围的值是保留"
+"内部使用的，而值大于999999是完全不能被使用的。你所有的无效的SRID记录都会被保"
+"留，而大于999999的会被移动到保留范围内，但spatial_ref_sys表会丢失检查约束，遵"
+"守primary key条件( 当多个无效的SRID值被转换成相同的保留的SRID值时)。"
 
 #. Tag: para
 #: installation.xml:1320
@@ -4565,10 +4449,10 @@ msgid ""
 "new srid (see <xref linkend=\"UpdateGeometrySRID\"/>), delete the invalid "
 "entry from spatial_ref_sys and re-construct the check(s) with:"
 msgstr ""
-"これの訂正には、カスタムSRSを妥当値 (多分91000から910999の間になります)に複写"
-"して、全てのテーブルを新しいSRIDに変換して(<xref linkend=\"UpdateGeometrySRID"
-"\"/>を参照して下さい)、不正なエントリをspatial_ref_sysから削除して、次を実行"
-"してチェック制約を再構築します。"
+"为了修复这个问题，你应该把你自定义的SRS表的SRID值都变成有效的（可能在910000与"
+"910999之间），然后把用到你自定义的SRID的所有相关表都转换成新的SRID值（参考"
+"<xref linkend=\"UpdateGeometrySRID\"/>），然后从表spatial_ref_sys中删除掉无效"
+"的SRID记录并重新添加如下约束："
 
 #. Tag: programlisting
 #: installation.xml:1327
@@ -4590,7 +4474,7 @@ msgstr "ALTER TABLE spatial_ref_sys ADD PRIMARY KEY(srid));"
 #: installation.xml:1340
 #, no-c-format
 msgid "Common Problems during installation"
-msgstr "共通の問題"
+msgstr "安装过程中的常见问题"
 
 #. Tag: para
 #: installation.xml:1341
@@ -4598,9 +4482,7 @@ msgstr "共通の問題"
 msgid ""
 "There are several things to check when your installation or upgrade doesn't "
 "go as you expected."
-msgstr ""
-"インストールやアップグレードが思うようにいかない時にチェックすることがいくつ"
-"かあります。"
+msgstr "当你安装或者升级时候没有得到你预想的结果时候，需要做如下几个步骤。"
 
 #. Tag: para
 #: installation.xml:1348
@@ -4616,14 +4498,12 @@ msgid ""
 "of PostgreSQL which is running, connect to the database using psql and run "
 "this query:"
 msgstr ""
-"PostgreSQL &min_postgres_version;以上をインストールしているか、実行中の"
-"PostgreSQLと同じ版のソースでコンパイルしているか、をチェックします。(Linuxの)"
-"ディストリビューションによって既にPostgreSQLがインストールされている時や、 "
-"PostgreSQLを以前にインストールして忘れた場合に、 混乱が発生することがありま"
-"す。PostGISはPostgreSQL &min_postgres_version;以上で動作します。古い版のもの"
-"を使った場合には、おかしな予想外のエラーメッセージが表示されます。実行中の"
-"PostgreSQLの版をチェックするには、psqlを使ってデータベースを接続して、次のク"
-"エリを実行して下さい。"
+"检查是否已安装PostgreSQL &min_postgres_version; 或更新版本，并且你正在编译的"
+"PostgreSQL源码和你正在运行的PostgreSQL版本是一致的。当你的(linux)环境已经安装"
+"了PostgreSQL，或者你之前用别的方式安装了postgresql，但却忘记了，那么极有可能"
+"会发生混乱。PostGIS只会在PostgreSQL &min_postgres_version;或更新版本运行。如"
+"果使用更老的版本，就会报一些奇怪的、意想不到的错误信息。你需要检查PostgreSQL"
+"正在运行的版本，使用psql连接到数据库并运行此查询："
 
 #. Tag: programlisting
 #: installation.xml:1361
@@ -4639,9 +4519,8 @@ msgid ""
 "existence of pre-installed packages using the <command>rpm</command> command "
 "as follows: <command>rpm -qa | grep postgresql</command>"
 msgstr ""
-"RPMベースのディストリビューションを実行している場合、 プリインストールされた"
-"パッケージが存在するかのチェックは、<command>rpm</command> コマンドを使って"
-"<command>rpm -qa | grep postgresql</command>でチェックできます。"
+"如果您正在运行一个RPM版本postgresql环境，你可以使用如下<command>rpm</command>"
+"命令检测之前的安装包信息：<command>rpm -qa | grep postgresql</command>"
 
 #. Tag: para
 #: installation.xml:1371
@@ -4649,9 +4528,7 @@ msgstr ""
 msgid ""
 "If your upgrade fails, make sure you are restoring into a database that "
 "already has PostGIS installed."
-msgstr ""
-"アップグレードに失敗する場合、既にPostGISがインストールされているデータベース"
-"にリストアしているか確認して下さい。"
+msgstr "如果你升级失败，确保恢复到一个安装了PostGIS的数据库。"
 
 #. Tag: programlisting
 #: installation.xml:1372
@@ -4666,8 +4543,8 @@ msgid ""
 "Also check that configure has correctly detected the location and version of "
 "PostgreSQL, the Proj4 library and the GEOS library."
 msgstr ""
-"また、コンフィギュアが正しくPostgreSQL、Proj4ライブラリ、GEOSライブラリのイン"
-"ストール先を検出したかチェックして下さい。"
+"同时检查configure命令正确地检测到了PostgreSQL的位置和版本信息以及Proj4库和"
+"GEOS库。"
 
 #. Tag: para
 #: installation.xml:1383
@@ -4678,16 +4555,16 @@ msgid ""
 "<varname>POSTGIS_PROJ_VERSION</varname> and <varname>POSTGIS_GEOS_VERSION</"
 "varname> variables have been set correctly."
 msgstr ""
-"コンフィギュアからの出力で<filename>postgis_config.h</filename>ファイルが作ら"
-"れます。<varname>POSTGIS_PGSQL_VERSION</varname>、"
-"<varname>POSTGIS_PROJ_VERSION</varname>および<varname>POSTGIS_GEOS_VERSION</"
-"varname>変数が正しくセットされたかをチェックして下さい。"
+"configure命令的输出用于生成<filename>postgis_config.h</filename>文件。检查这"
+"个文件里面<varname>POSTGIS_PGSQL_VERSION</varname>, "
+"<varname>POSTGIS_PROJ_VERSION</varname> 和 <varname>POSTGIS_GEOS_VERSION</"
+"varname>变量被正确设置。"
 
 #. Tag: title
 #: installation.xml:1396
 #, no-c-format
 msgid "Loader/Dumper"
-msgstr "ローダ/ダンパ "
+msgstr "批量加载/批量转储工具"
 
 #. Tag: para
 #: installation.xml:1398
@@ -4696,8 +4573,8 @@ msgid ""
 "The data loader and dumper are built and installed automatically as part of "
 "the PostGIS build. To build and install them manually:"
 msgstr ""
-"データのローダとダンパは、PostGISのビルドの一部として、自動的にビルド、インス"
-"トールされます。手動でビルド、インストールするには、次を実行します。"
+"数据批量加载和批量导出工具是安装PostGIS时候被自动同时安装的，手动安装该工具步"
+"骤如下:"
 
 #. Tag: programlisting
 #: installation.xml:1403
@@ -4721,8 +4598,8 @@ msgid ""
 "queries) into ESRI Shape files. For more verbose documentation, see the "
 "online help, and the manual pages."
 msgstr ""
-"ローダは<filename>shp2pgsql</filename>と呼ばれ、ESRIシェープファイルを"
-"PostGIS/PostgreSQLにロードするのに適したSQLに変換します。ダンパは"
-"<filename>pgsql2shp</filename>と呼ばれ、PostGISのテーブル(またはクエリ)から"
-"ESRIシェープファイルに変換します。より詳しいドキュメントをご覧になるには、オ"
-"ンラインヘルプとマニュアルページをご覧ください。"
+"加载工具指的是<filename>shp2pgsql</filename>这个命令，它把ESRI Shape格式的文"
+"件(译者注：后缀名为.shp)转换为SQL脚本，以便在 PostGIS/PostgreSQL数据库中执"
+"行。批量导出工具指的是<filename>pgsql2shp</filename>，它把PostGIS的表或者一个"
+"查询转换成ESRI Shape格式的文件。关于更多详细文档信息，请查看在线帮助和相关手"
+"册。"
