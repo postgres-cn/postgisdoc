@@ -76,11 +76,11 @@ po文件的消息提取自docbook格式xml文件，带有xml标签和实体引�
 
 翻译进度及翻译任务的管理参照以下wiki页面
 
-- [postgis-2.3.3的翻译](https://github.com/postgres-cn/postgisdoc/wiki/postgis-2.3)
+- [postgis-2.3.3的翻译](https://github.com/postgres-cn/postgisdoc/wiki/postgis2.3.3)
 
 ## 5. 在线文档
 
-- [postgis-2.3.3中文手册(翻译中)](http://postgres.cn/docs/9.6/postgis-2.3)
+- [postgis-2.3.3中文手册(翻译中)](http://postgres.cn/docs/postgis-2.3)
 
 ## 6. 本地文档编译
 
