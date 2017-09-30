@@ -1,3 +1,5 @@
+# Translators:
+# 韩悦悦 <amily_yue@qq.com>, 2017
 # SOME DESCRIPTIVE TITLE.
 #
 # Translators:
